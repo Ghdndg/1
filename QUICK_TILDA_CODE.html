@@ -1,0 +1,151 @@
+<!-- 
+   VITAHUB Чат-бот для Tilda - Упрощенная версия
+   
+   ИНСТРУКЦИЯ:
+   1. Скопируйте весь этот код
+   2. В Tilda добавьте блок "HTML-код" (T123)
+   3. Вставьте код
+   4. ОБЯЗАТЕЛЬНО замените "ВАШ-ДОМЕН" на реальный URL вашего сервера
+   5. Сохраните и опубликуйте
+-->
+
+<div id="vitahub-chat-widget"></div>
+
+<script>
+// ⚠️ ЗАМЕНИТЕ URL НА ВАШ СЕРВЕР!
+const VITAHUB_API_URL = 'https://ВАШ-ДОМЕН.com/api/chat';
+
+// Настройки виджета
+const VITAHUB_CONFIG = {
+  botName: 'VITAHUB Ассистент',
+  primaryColor: '#FF4757',
+  position: 'right', // 'left' или 'right'
+  logoUrl: 'https://cdn-ru.bitrix24.ru/b1238237/landing/65a/65a2222e32cd7a07a9f93ca0937fbe42/Logo_VITAHUB_small_b__1__2x_2x.png'
+};
+
+// Класс чат-бота (компактная версия)
+class VitahubWidget {
+  constructor() {
+    this.isOpen = false;
+    this.sessionId = this.generateSessionId();
+    this.init();
+  }
+  
+  generateSessionId() {
+    return 'vitahub_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9);
+  }
+  
+  init() {
+    this.createStyles();
+    this.createHTML();
+    this.bindEvents();
+  }
+  
+  createStyles() {
+    const style = document.createElement('style');
+    style.innerHTML = `
+      .vitahub-widget { font-family: -apple-system, BlinkMacSystemFont, sans-serif; position: fixed; bottom: 20px; ${VITAHUB_CONFIG.position}: 20px; z-index: 999999; }
+      .vitahub-trigger { width: 60px; height: 60px; border-radius: 50%; background: ${VITAHUB_CONFIG.primaryColor}; border: none; cursor: pointer; box-shadow: 0 4px 20px rgba(0,0,0,0.3); display: flex; align-items: center; justify-content: center; transition: all 0.3s; }
+      .vitahub-trigger:hover { transform: scale(1.1); }
+      .vitahub-trigger svg { width: 24px; height: 24px; fill: white; }
+      .vitahub-window { position: absolute; bottom: 80px; ${VITAHUB_CONFIG.position}: 0; width: 350px; height: 500px; background: white; border-radius: 12px; box-shadow: 0 10px 40px rgba(0,0,0,0.2); display: none; flex-direction: column; }
+      .vitahub-header { background: ${VITAHUB_CONFIG.primaryColor}; color: white; padding: 15px; border-radius: 12px 12px 0 0; display: flex; align-items: center; justify-content: space-between; }
+      .vitahub-header h3 { margin: 0; font-size: 16px; }
+      .vitahub-close { background: none; border: none; color: white; font-size: 20px; cursor: pointer; }
+      .vitahub-messages { flex: 1; padding: 15px; overflow-y: auto; }
+      .vitahub-message { margin: 10px 0; padding: 10px; border-radius: 8px; max-width: 80%; }
+      .vitahub-message.user { background: #f0f0f0; margin-left: auto; }
+      .vitahub-message.bot { background: #e8f4fd; }
+      .vitahub-input { padding: 15px; border-top: 1px solid #eee; display: flex; gap: 10px; }
+      .vitahub-input input { flex: 1; padding: 8px 12px; border: 1px solid #ddd; border-radius: 20px; outline: none; }
+      .vitahub-input button { background: ${VITAHUB_CONFIG.primaryColor}; color: white; border: none; padding: 8px 15px; border-radius: 20px; cursor: pointer; }
+      @media (max-width: 768px) { .vitahub-window { width: calc(100vw - 40px); height: 80vh; } }
+    `;
+    document.head.appendChild(style);
+  }
+  
+  createHTML() {
+    document.getElementById('vitahub-chat-widget').innerHTML = `
+      <div class="vitahub-widget">
+        <button class="vitahub-trigger" onclick="vitahubWidget.toggle()">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
+        </button>
+        <div class="vitahub-window" id="vitahub-window">
+          <div class="vitahub-header">
+            <h3>${VITAHUB_CONFIG.botName}</h3>
+            <button class="vitahub-close" onclick="vitahubWidget.close()">×</button>
+          </div>
+          <div class="vitahub-messages" id="vitahub-messages">
+            <div class="vitahub-message bot">👋 Привет! Я ассистент VITAHUB. Готов ответить на ваши вопросы о наших функциональных напитках!</div>
+          </div>
+          <div class="vitahub-input">
+            <input type="text" id="vitahub-input" placeholder="Напишите ваш вопрос..." onkeypress="if(event.key==='Enter') vitahubWidget.sendMessage()">
+            <button onclick="vitahubWidget.sendMessage()">Отправить</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+  
+  bindEvents() {
+    // События уже привязаны через onclick в HTML
+  }
+  
+  toggle() {
+    if (this.isOpen) {
+      this.close();
+    } else {
+      this.open();
+    }
+  }
+  
+  open() {
+    this.isOpen = true;
+    document.getElementById('vitahub-window').style.display = 'flex';
+    document.getElementById('vitahub-input').focus();
+  }
+  
+  close() {
+    this.isOpen = false;
+    document.getElementById('vitahub-window').style.display = 'none';
+  }
+  
+  async sendMessage() {
+    const input = document.getElementById('vitahub-input');
+    const message = input.value.trim();
+    if (!message) return;
+    
+    this.addMessage(message, 'user');
+    input.value = '';
+    
+    try {
+      const response = await fetch(VITAHUB_API_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          message: message,
+          sessionId: this.sessionId
+        })
+      });
+      
+      const data = await response.json();
+      this.addMessage(data.message || 'Извините, произошла ошибка', 'bot');
+    } catch (error) {
+      this.addMessage('Не удалось связаться с сервером. Проверьте подключение.', 'bot');
+      console.error('Ошибка:', error);
+    }
+  }
+  
+  addMessage(text, type) {
+    const messages = document.getElementById('vitahub-messages');
+    const div = document.createElement('div');
+    div.className = `vitahub-message ${type}`;
+    div.textContent = text;
+    messages.appendChild(div);
+    messages.scrollTop = messages.scrollHeight;
+  }
+}
+
+// Инициализация виджета
+window.vitahubWidget = new VitahubWidget();
+</script> 

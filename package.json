@@ -1,0 +1,22 @@
+{
+  "name": "tilda-deepseek-chatbot",
+  "version": "1.0.0",
+  "description": "Чат-бот на основе DeepSeek для сайта на Tilda",
+  "main": "app/index.js",
+  "scripts": {
+    "start": "node app/index.js",
+    "dev": "nodemon app/index.js"
+  },
+  "dependencies": {
+    "axios": "^1.6.5",
+    "colors": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ollama": "^0.5.16",
+    "openai": "^4.104.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
+}
