@@ -1,0 +1,15 @@
+{"timestamp":"2025-06-19T13:28:57.467Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-19T13:29:00.689Z","level":"info","message":"GET /","data":{"status":304,"duration":"9ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-19T13:29:01.080Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"3ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-19T13:29:52.090Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":70,"metadata":{"timestamp":1750339792062,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-19T13:29:54.723Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":667}}
+{"timestamp":"2025-06-19T13:29:54.725Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-19T13:29:54.730Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2641ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-19T13:31:14.393Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":8,"metadata":{"timestamp":1750339874389,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-19T13:31:15.853Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":248}}
+{"timestamp":"2025-06-19T13:31:15.856Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-19T13:31:15.862Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1469ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-19T13:35:26.393Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-19T13:51:24.607Z","level":"info","message":"GET /","data":{"status":200,"duration":"12ms","userAgent":"TelegramBot (like TwitterBot)","ip":"::1"}}
+{"timestamp":"2025-06-19T13:51:36.159Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"2ms","userAgent":"Telegram/30884 CFNetwork/1494.0.7 Darwin/23.4.0","ip":"::1"}}
+{"timestamp":"2025-06-19T13:51:38.007Z","level":"info","message":"GET /","data":{"status":200,"duration":"4ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}

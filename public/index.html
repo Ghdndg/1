@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAHUB - Функциональные напитки нового поколения</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+        
+        /* Градиентный фон */
+        .hero {
+            background: linear-gradient(135deg, #1494e1 0%, #4dacf7 50%, #7cc3fc 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="70" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="10" cy="60" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+            animation: float 20s infinite linear;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0) rotate(0deg); }
+            100% { transform: translateY(-20px) rotate(360deg); }
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-content {
+            text-align: center;
+            color: white;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 30px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            animation: pulse 3s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+        
+        .logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+        
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            line-height: 1.2;
+        }
+        
+        .subtitle {
+            font-size: 1.3rem;
+            font-weight: 300;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+        
+        .description {
+            font-size: 1.1rem;
+            margin-bottom: 50px;
+            line-height: 1.8;
+            opacity: 0.9;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin: 80px 0;
+        }
+        
+        .feature-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+        }
+        
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+            background: linear-gradient(135deg, #1494e1, #4dacf7);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        
+        .feature-card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #2c3e50;
+        }
+        
+        .feature-card p {
+            color: #5a6c7d;
+            line-height: 1.6;
+        }
+        
+        .cta-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 50px 40px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .cta-section h2 {
+            font-size: 2.2rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            color: #2c3e50;
+        }
+        
+        .cta-section p {
+            font-size: 1.1rem;
+            color: #5a6c7d;
+            margin-bottom: 30px;
+        }
+        
+        .chat-button {
+            background: linear-gradient(135deg, #1494e1, #4dacf7);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            box-shadow: 0 8px 25px rgba(255, 71, 87, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .chat-button:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .chat-button:hover:before {
+            left: 100%;
+        }
+        
+        .chat-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 12px 35px rgba(255, 71, 87, 0.4);
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+        }
+        
+        .product-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .product-card.energy {
+            border-left: 5px solid #1494e1;
+        }
+        
+        .product-card.detox {
+            border-left: 5px solid #2ECC71;
+        }
+        
+        .product-card.antistress {
+            border-left: 5px solid #9B59B6;
+        }
+        
+        .product-card h3 {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: #2c3e50;
+        }
+        
+        .product-card .category {
+            color: #8999a8;
+            font-size: 0.9rem;
+            margin-bottom: 15px;
+        }
+        
+        .product-card p {
+            color: #5a6c7d;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .product-features {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .product-features li {
+            padding: 5px 0;
+            color: #5a6c7d;
+            font-size: 0.9rem;
+        }
+        
+        .product-features li:before {
+            content: '✓';
+            color: #2ECC71;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        
+        .footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 80px;
+        }
+        
+        .footer p {
+            opacity: 0.8;
+        }
+        
+        /* Адаптивность */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+            
+            .subtitle {
+                font-size: 1.1rem;
+            }
+            
+            .description {
+                font-size: 1rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .feature-card,
+            .cta-section {
+                padding: 30px 20px;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Анимации загрузки */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+        
+        .fade-in:nth-child(1) { animation-delay: 0.1s; }
+        .fade-in:nth-child(2) { animation-delay: 0.2s; }
+        .fade-in:nth-child(3) { animation-delay: 0.3s; }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <section class="hero">
+    <div class="container">
+            <div class="hero-content">
+                
+                <h1 class="fade-in">VITAHUB</h1>
+                <p class="subtitle fade-in">Функциональные напитки нового поколения</p>
+                <p class="description fade-in">
+                    Инновационные напитки на основе научных исследований. 
+                    Для энергии, детокса и борьбы со стрессом.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Подключение чат-бота -->
+    <div id="vitahub-chatbot-container"></div>
+    
+    <script>
+        // Конфигурация чат-бота
+        const CHATBOT_CONFIG = {
+            apiUrl: window.location.origin + '/api/chat',
+            botName: 'VITAHUB Ассистент',
+            welcomeMessage: '👋 Привет! Я виртуальный ассистент VITAHUB. Готов рассказать всё о наших функциональных напитках! О чём хотите узнать?',
+            
+            position: 'right',
+            theme: 'light',
+            primaryColor: '#1494e1',
+            accentColor: '#4dacf7',
+            
+            logoUrl: 'https://cdn-ru.bitrix24.ru/b1238237/landing/65a/65a2222e32cd7a07a9f93ca0937fbe42/Logo_VITAHUB_small_b__1__2x_2x.png',
+            avatarUrl: 'https://cdn-ru.bitrix24.ru/b1238237/landing/65a/65a2222e32cd7a07a9f93ca0937fbe42/Logo_VITAHUB_small_b__1__2x_2x.png',
+            
+            enableVoice: true,
+            enableSounds: true,
+            enableSuggestions: true,
+            enableTypingIndicator: true,
+            enableHistory: true,
+            
+            texts: {
+                placeholder: 'Напишите ваш вопрос о VITAHUB...',
+                sendButton: 'Отправить',
+                voiceButton: 'Голосовое сообщение',
+                minimizeButton: 'Свернуть',
+                closeButton: 'Закрыть',
+                typingIndicator: 'печатает...',
+                errorMessage: 'Произошла ошибка. Попробуйте еще раз.',
+                offlineMessage: 'Сейчас я недоступен, но вы можете оставить сообщение.'
+            }
+        };
+
+        // Класс чат-бота (встроенный код из integration файла)
+        class VitahubChatbot {
+            constructor(config) {
+                this.config = config;
+                this.sessionId = this.getOrCreateSessionId();
+                this.isOpen = false;
+                this.isTyping = false;
+                this.messageHistory = this.loadHistory();
+                this.suggestions = [];
+                
+                this.init();
+            }
+            
+            getOrCreateSessionId() {
+                let sessionId = localStorage.getItem('vitahub_session_id');
+                if (!sessionId) {
+                    sessionId = `vitahub_${Date.now()}_${Math.random().toString(36).substring(2, 15)}`;
+                    localStorage.setItem('vitahub_session_id', sessionId);
+                }
+                return sessionId;
+            }
+            
+            loadHistory() {
+                if (!this.config.enableHistory) return [];
+                try {
+                    const history = localStorage.getItem('vitahub_chat_history');
+                    return history ? JSON.parse(history) : [];
+                } catch (e) {
+                    return [];
+                }
+            }
+            
+            saveHistory() {
+                if (!this.config.enableHistory) return;
+                try {
+                    localStorage.setItem('vitahub_chat_history', JSON.stringify(this.messageHistory.slice(-50)));
+                } catch (e) {
+                    console.warn('Не удалось сохранить историю чата');
+                }
+            }
+            
+            init() {
+                this.createStyles();
+                this.createHTML();
+                this.bindEvents();
+                this.loadSuggestions();
+                
+                if (this.messageHistory.length > 0) {
+                    this.renderMessages();
+                } else {
+                    this.addBotMessage(this.config.welcomeMessage, true);
+                }
+                
+                console.log('🤖 VITAHUB Chatbot v2.0 инициализирован');
+            }
+            
+            createStyles() {
+                if (document.getElementById('vitahub-chatbot-styles')) return;
+                
+                const style = document.createElement('style');
+                style.id = 'vitahub-chatbot-styles';
+                style.textContent = `
+                    /* Встроенные стили чат-бота */
+                    .vitahub-chatbot * { box-sizing: border-box; }
+                    .vitahub-chatbot {
+                        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                        position: fixed;
+                        bottom: 20px;
+                        right: 20px;
+                        z-index: 999999;
+                        max-width: 100vw;
+                    }
+                    .vitahub-chat-trigger {
+                        width: 64px; height: 64px; border-radius: 50%;
+                        background: linear-gradient(135deg, #1494e1, #4dacf7);
+                        box-shadow: 0 8px 24px rgba(20, 148, 225, 0.3);
+                        cursor: pointer; display: flex; align-items: center; justify-content: center;
+                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        border: none; position: relative; overflow: hidden;
+                    }
+                    .vitahub-chat-trigger:hover {
+                        transform: translateY(-2px);
+                        box-shadow: 0 12px 32px rgba(20, 148, 225, 0.4);
+                    }
+                    .vitahub-trigger-icon { width: 28px; height: 28px; fill: white; }
+                    .vitahub-chat-window {
+                        position: absolute; bottom: 80px; right: 0;
+                        width: 380px; max-width: calc(100vw - 40px);
+                        height: 600px; max-height: calc(100vh - 120px);
+                        background: white; border-radius: 16px;
+                        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+                        display: flex; flex-direction: column; overflow: hidden;
+                        opacity: 0; transform: translateY(20px) scale(0.95);
+                        pointer-events: none;
+                        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+                        border: 1px solid #e1e8ed;
+                    }
+                    .vitahub-chat-window.active {
+                        opacity: 1; transform: translateY(0) scale(1); pointer-events: auto;
+                    }
+                    .vitahub-chat-header {
+                        background: linear-gradient(135deg, #1494e1, #4dacf7);
+                        color: white; padding: 16px 20px; display: flex;
+                        align-items: center; justify-content: space-between;
+                    }
+                    .vitahub-header-info { display: flex; align-items: center; gap: 12px; flex: 1; }
+                    .vitahub-bot-name { font-weight: 600; font-size: 16px; margin: 0; }
+                    .vitahub-bot-status { font-size: 12px; opacity: 0.9; margin: 2px 0 0 0; }
+                    .vitahub-header-btn {
+                        width: 32px; height: 32px; border: none;
+                        background: rgba(255, 255, 255, 0.2); border-radius: 50%;
+                        cursor: pointer; display: flex; align-items: center; justify-content: center;
+                        transition: all 0.2s;
+                    }
+                    .vitahub-header-btn:hover { background: rgba(255, 255, 255, 0.3); }
+                    .vitahub-header-btn svg { width: 16px; height: 16px; fill: white; }
+                    .vitahub-messages-container {
+                        flex: 1; padding: 20px; overflow-y: auto;
+                        display: flex; flex-direction: column; gap: 16px;
+                        background: #fafbfc; scroll-behavior: smooth;
+                    }
+                    .vitahub-message { max-width: 85%; animation: messageSlideIn 0.3s ease-out; }
+                    @keyframes messageSlideIn {
+                        from { opacity: 0; transform: translateY(10px); }
+                        to { opacity: 1; transform: translateY(0); }
+                    }
+                    .vitahub-message.user { align-self: flex-end; }
+                    .vitahub-message.bot { align-self: flex-start; }
+                    .vitahub-message-content {
+                        padding: 12px 16px; border-radius: 18px; word-wrap: break-word;
+                        line-height: 1.4;
+                    }
+                    .vitahub-message.user .vitahub-message-content {
+                        background: linear-gradient(135deg, #1494e1, #4dacf7);
+                        color: white; border-bottom-right-radius: 4px;
+                    }
+                    .vitahub-message.bot .vitahub-message-content {
+                        background: white; color: #2c3e50; border: 1px solid #e1e8ed;
+                        border-bottom-left-radius: 4px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+                    }
+                    .vitahub-message-time {
+                        font-size: 11px; color: #8999a8; margin-top: 4px;
+                    }
+                    .vitahub-input-panel {
+                        padding: 16px 20px; background: white; border-top: 1px solid #e1e8ed;
+                        display: flex; gap: 12px; align-items: flex-end;
+                    }
+                    .vitahub-input-container {
+                        flex: 1; background: #f8f9fa; border-radius: 24px;
+                        border: 1px solid #e1e8ed; transition: all 0.2s;
+                        display: flex; align-items: flex-end;
+                    }
+                    .vitahub-input-container:focus-within {
+                        border-color: #1494e1; box-shadow: 0 0 0 3px rgba(20, 148, 225, 0.1);
+                    }
+                    .vitahub-message-input {
+                        flex: 1; border: none; background: transparent; padding: 12px 16px;
+                        font-size: 14px; resize: none; outline: none;
+                        min-height: 20px; max-height: 120px; line-height: 1.4;
+                        font-family: inherit;
+                    }
+                    .vitahub-message-input::placeholder { color: #8999a8; }
+                    .vitahub-send-btn {
+                        width: 36px; height: 36px; background: #1494e1; color: white;
+                        border: none; border-radius: 50%; cursor: pointer;
+                        display: flex; align-items: center; justify-content: center;
+                        transition: all 0.2s; box-shadow: 0 2px 8px rgba(20, 148, 225, 0.2);
+                    }
+                    .vitahub-send-btn:hover {
+                        background: #4dacf7; transform: scale(1.05);
+                        box-shadow: 0 4px 12px rgba(20, 148, 225, 0.3);
+                    }
+                    .vitahub-send-btn:disabled {
+                        background: #ddd; cursor: not-allowed; transform: none; box-shadow: none;
+                    }
+                    .vitahub-send-btn svg { width: 16px; height: 16px; fill: currentColor; }
+            `;
+            document.head.appendChild(style);
+            }
+            
+            createHTML() {
+                const container = document.getElementById('vitahub-chatbot-container');
+                container.innerHTML = `
+                    <div class="vitahub-chatbot">
+                        <button class="vitahub-chat-trigger" aria-label="Открыть чат с ассистентом VITAHUB">
+                            <svg class="vitahub-trigger-icon" viewBox="0 0 24 24">
+                                <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.24 0-2.45-.24-3.57-.73L7 20l.73-1.43C7.24 17.45 7 16.24 7 15c0-2.76 2.24-5 5-5s5 2.24 5 5-2.24 5-5 5zm-1-8h2v2h-2v-2zm0-4h2v2h-2V7z"/>
+                </svg>
+                        </button>
+                        <div class="vitahub-chat-window">
+                            <div class="vitahub-chat-header">
+                                <div class="vitahub-header-info">
+                                    <div class="vitahub-header-text">
+                                        <div class="vitahub-bot-name">${this.config.botName}</div>
+                                        <div class="vitahub-bot-status">Онлайн • Обычно отвечает мгновенно</div>
+                                    </div>
+                                </div>
+                                <button class="vitahub-header-btn vitahub-minimize-btn" aria-label="Свернуть чат">
+                                    <svg viewBox="0 0 24 24"><path d="M19 13H5v-2h14v2z"/></svg>
+                                </button>
+                            </div>
+                            <div class="vitahub-messages-container" id="vitahub-messages"></div>
+                            <div class="vitahub-input-panel">
+                                <div class="vitahub-input-container">
+                                    <textarea class="vitahub-message-input" id="vitahub-message-input"
+                                        placeholder="${this.config.texts.placeholder}" rows="1" maxlength="1000"></textarea>
+                                </div>
+                                <button class="vitahub-send-btn" id="vitahub-send-btn" aria-label="Отправить сообщение">
+                                    <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                `;
+                
+                this.elements = {
+                    trigger: container.querySelector('.vitahub-chat-trigger'),
+                    window: container.querySelector('.vitahub-chat-window'),
+                    messages: container.querySelector('#vitahub-messages'),
+                    input: container.querySelector('#vitahub-message-input'),
+                    sendBtn: container.querySelector('#vitahub-send-btn'),
+                    minimizeBtn: container.querySelector('.vitahub-minimize-btn')
+                };
+            }
+            
+            bindEvents() {
+                this.elements.trigger.addEventListener('click', () => this.toggle());
+                this.elements.minimizeBtn.addEventListener('click', () => this.close());
+                this.elements.sendBtn.addEventListener('click', () => this.sendMessage());
+                this.elements.input.addEventListener('keypress', (e) => {
+                    if (e.key === 'Enter' && !e.shiftKey) {
+                        e.preventDefault();
+                        this.sendMessage();
+                    }
+                });
+                this.elements.input.addEventListener('input', () => this.updateSendButton());
+            }
+            
+            updateSendButton() {
+                const hasText = this.elements.input.value.trim().length > 0;
+                this.elements.sendBtn.disabled = !hasText;
+            }
+            
+            toggle() {
+                if (this.isOpen) {
+                    this.close();
+                } else {
+                    this.open();
+                }
+            }
+            
+            open() {
+                this.isOpen = true;
+                this.elements.window.classList.add('active');
+                setTimeout(() => this.elements.input.focus(), 300);
+                this.scrollToBottom();
+            }
+            
+            close() {
+                this.isOpen = false;
+                this.elements.window.classList.remove('active');
+            }
+            
+            async sendMessage() {
+                const message = this.elements.input.value.trim();
+                if (!message) return;
+                
+                this.addUserMessage(message);
+                this.elements.input.value = '';
+                this.updateSendButton();
+                
+                try {
+                    const response = await this.callAPI(message);
+                    if (response.message) {
+                        this.addBotMessage(response.message);
+                    }
+                } catch (error) {
+                    this.addBotMessage('Произошла ошибка. Попробуйте еще раз.');
+                    console.error('Ошибка отправки сообщения:', error);
+                }
+            }
+            
+            async callAPI(message) {
+                const response = await fetch(this.config.apiUrl, {
+                        method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                        body: JSON.stringify({ 
+                            message: message,
+                        sessionId: this.sessionId,
+                        metadata: { timestamp: Date.now(), url: window.location.href }
+                    })
+                });
+                
+                if (!response.ok) {
+                    throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+                }
+                
+                return await response.json();
+            }
+            
+            addUserMessage(message) {
+                const messageEl = this.createMessageElement(message, 'user');
+                this.elements.messages.appendChild(messageEl);
+                this.messageHistory.push({ type: 'user', content: message, timestamp: Date.now() });
+                this.saveHistory();
+                this.scrollToBottom();
+            }
+            
+            addBotMessage(message, isWelcome = false) {
+                const messageEl = this.createMessageElement(message, 'bot');
+                this.elements.messages.appendChild(messageEl);
+                if (!isWelcome) {
+                    this.messageHistory.push({ type: 'bot', content: message, timestamp: Date.now() });
+                    this.saveHistory();
+                }
+                this.scrollToBottom();
+            }
+            
+            createMessageElement(content, type) {
+                const messageEl = document.createElement('div');
+                messageEl.className = `vitahub-message ${type}`;
+                const time = new Date().toLocaleTimeString('ru-RU', { hour: '2-digit', minute: '2-digit' });
+                messageEl.innerHTML = `
+                    <div class="vitahub-message-content">${this.formatMessage(content)}</div>
+                    <div class="vitahub-message-time">${time}</div>
+                `;
+                return messageEl;
+            }
+            
+            formatMessage(content) {
+                return content
+                    .replace(/\n/g, '<br>')
+                    .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
+                    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+                    .replace(/\*(.*?)\*/g, '<em>$1</em>');
+            }
+            
+            renderMessages() {
+                this.messageHistory.forEach(msg => {
+                    const messageEl = this.createMessageElement(msg.content, msg.type);
+                    this.elements.messages.appendChild(messageEl);
+                });
+                this.scrollToBottom();
+            }
+            
+            scrollToBottom() {
+                setTimeout(() => {
+                    this.elements.messages.scrollTop = this.elements.messages.scrollHeight;
+                }, 100);
+            }
+            
+            loadSuggestions() {
+                // Заглушка для загрузки предложений
+            }
+        }
+
+        // Функция для открытия чат-бота из кнопки на странице
+        function openChatbot() {
+            if (window.vitahubChatbot) {
+                window.vitahubChatbot.open();
+            }
+        }
+
+        // Инициализация после загрузки страницы
+        document.addEventListener('DOMContentLoaded', function() {
+            window.vitahubChatbot = new VitahubChatbot(CHATBOT_CONFIG);
+            console.log('🚀 VITAHUB Chatbot v2.0 успешно запущен на тестовой странице!');
+        });
+    </script>
+</body>
+</html> 

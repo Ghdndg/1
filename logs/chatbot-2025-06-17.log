@@ -1,0 +1,705 @@
+{"timestamp":"2025-06-17T07:17:57.588Z","level":"info","message":"Сервер запускается","data":{"company":"VITAHUB","product":"VITAHUB Energy","port":3000}}
+{"timestamp":"2025-06-17T07:18:01.112Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"185ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:18:16.195Z","level":"info","message":"Получен запрос","data":{"sessionId":"session_1750144696195_c6rbxszvj7","messageLength":33,"metadata":{}}}
+{"timestamp":"2025-06-17T07:18:16.208Z","level":"debug","message":"Отправляем запрос к Ollama API","data":{"model":"qwen2.5:3b"}}
+{"timestamp":"2025-06-17T07:18:46.223Z","level":"error","message":"Таймаут запроса к Ollama API","data":{"timeout":"30 секунд","model":"qwen2.5:3b"}}
+{"timestamp":"2025-06-17T07:18:46.225Z","level":"error","message":"Ollama API недоступен (таймаут)","data":{"message":"TIMEOUT","model":"qwen2.5:3b"}}
+{"timestamp":"2025-06-17T07:18:46.226Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"session_1750144696195_c6rbxszvj7","source":"timeout","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:18:46.228Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"30034ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:19:20.917Z","level":"info","message":"GET /","data":{"status":200,"duration":"10ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:19:22.861Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"6ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:19:28.665Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":6,"metadata":{"timestamp":1750144768662,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:19:28.667Z","level":"debug","message":"Отправляем запрос к Ollama API","data":{"model":"qwen2.5:3b"}}
+{"timestamp":"2025-06-17T07:19:58.679Z","level":"error","message":"Таймаут запроса к Ollama API","data":{"timeout":"30 секунд","model":"qwen2.5:3b"}}
+{"timestamp":"2025-06-17T07:19:58.681Z","level":"error","message":"Ollama API недоступен (таймаут)","data":{"message":"TIMEOUT","model":"qwen2.5:3b"}}
+{"timestamp":"2025-06-17T07:19:58.682Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"timeout","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:19:58.684Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"30019ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:23:48.345Z","level":"info","message":"Сервер запущен","data":{"port":"3000","version":"3.0.0","deepseekConfigured":false}}
+{"timestamp":"2025-06-17T07:23:53.548Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"7ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:00.427Z","level":"info","message":"GET /","data":{"status":304,"duration":"4ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:02.231Z","level":"info","message":"Получен запрос","data":{"sessionId":"session_1750145042231_w6219ov2tvj","messageLength":25,"metadata":{}}}
+{"timestamp":"2025-06-17T07:24:02.276Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"session_1750145042231_w6219ov2tvj","source":"demo","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:24:02.327Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"97ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:04.944Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":6,"metadata":{"timestamp":1750145044941,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:24:04.947Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"demo","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:24:04.950Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"6ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:12.975Z","level":"info","message":"GET /test.html","data":{"status":200,"duration":"7ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:14.151Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"2ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:26.751Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750145066748","messageLength":17,"metadata":{}}}
+{"timestamp":"2025-06-17T07:24:26.752Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750145066748","source":"demo","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:24:26.754Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"3ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:36.704Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750145076700","messageLength":9,"metadata":{}}}
+{"timestamp":"2025-06-17T07:24:36.705Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750145076700","source":"demo","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:24:36.708Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"4ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:43.388Z","level":"info","message":"GET /api/suggestions","data":{"status":200,"duration":"3ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:45.589Z","level":"info","message":"Получен запрос","data":{"sessionId":"session_1750145085588_b0ss5nh3s54","messageLength":26,"metadata":{}}}
+{"timestamp":"2025-06-17T07:24:45.590Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"session_1750145085588_b0ss5nh3s54","source":"demo","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:24:45.592Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"4ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:24:47.026Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"1ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:29:41.328Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","deepseekConfigured":false}}
+{"timestamp":"2025-06-17T07:29:47.157Z","level":"info","message":"Получен запрос","data":{"sessionId":"session_1750145387157_w6xeg9raz49","messageLength":34,"metadata":{}}}
+{"timestamp":"2025-06-17T07:29:47.158Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"session_1750145387157_w6xeg9raz49","source":"demo","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:29:47.167Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"10ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:29:54.940Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"4ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:30:04.580Z","level":"info","message":"GET /test.html","data":{"status":304,"duration":"7ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:30:05.752Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"1ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:30:10.561Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750145410563","messageLength":6,"metadata":{}}}
+{"timestamp":"2025-06-17T07:30:10.562Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750145410563","source":"demo","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:30:10.563Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:30:23.601Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750145423601","messageLength":17,"metadata":{}}}
+{"timestamp":"2025-06-17T07:30:23.613Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750145423601","source":"demo","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:30:23.624Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"23ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:32:07.755Z","level":"info","message":"Сервер запущен","data":{"port":"3000","version":"3.0.0","deepseekConfigured":true}}
+{"timestamp":"2025-06-17T07:32:14.964Z","level":"info","message":"Получен запрос","data":{"sessionId":"session_1750145534964_x28as86guno","messageLength":34,"metadata":{}}}
+{"timestamp":"2025-06-17T07:32:16.103Z","level":"warning","message":"Ошибка DeepSeek API, используем локальную обработку","data":{"error":"Request failed with status code 402","status":402}}
+{"timestamp":"2025-06-17T07:32:16.104Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"session_1750145534964_x28as86guno","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:32:16.109Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1145ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:32:26.655Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"2ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:32:29.962Z","level":"info","message":"GET /","data":{"status":304,"duration":"2ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:32:34.974Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":6,"metadata":{"timestamp":1750145554968,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:32:35.931Z","level":"warning","message":"Ошибка DeepSeek API, используем локальную обработку","data":{"error":"Request failed with status code 402","status":402}}
+{"timestamp":"2025-06-17T07:32:35.932Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:32:35.935Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"961ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:32:44.486Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":10,"metadata":{"timestamp":1750145564484,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:32:45.408Z","level":"warning","message":"Ошибка DeepSeek API, используем локальную обработку","data":{"error":"Request failed with status code 402","status":402}}
+{"timestamp":"2025-06-17T07:32:45.409Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:32:45.410Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"924ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:32:52.588Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":10,"metadata":{"timestamp":1750145572581,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:32:53.546Z","level":"warning","message":"Ошибка DeepSeek API, используем локальную обработку","data":{"error":"Request failed with status code 402","status":402}}
+{"timestamp":"2025-06-17T07:32:53.550Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:32:53.557Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"969ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:19.503Z","level":"info","message":"Сервер запущен","data":{"port":"3000","version":"3.0.0","deepseekConfigured":true}}
+{"timestamp":"2025-06-17T07:33:23.635Z","level":"info","message":"GET /","data":{"status":304,"duration":"10ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:24.553Z","level":"info","message":"Получен запрос","data":{"sessionId":"session_1750145604553_em17i6r105m","messageLength":42,"metadata":{}}}
+{"timestamp":"2025-06-17T07:33:25.690Z","level":"warning","message":"Ошибка DeepSeek API, используем локальную обработку","data":{"error":"Request failed with status code 402","status":402}}
+{"timestamp":"2025-06-17T07:33:25.691Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"session_1750145604553_em17i6r105m","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:33:25.693Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1141ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:28.422Z","level":"info","message":"GET /","data":{"status":304,"duration":"3ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:31.115Z","level":"info","message":"GET /","data":{"status":304,"duration":"3ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:34.195Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"2ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:35.390Z","level":"info","message":"GET /","data":{"status":304,"duration":"1ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:39.438Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":3,"metadata":{"timestamp":1750145619427,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:33:40.408Z","level":"warning","message":"Ошибка DeepSeek API, используем локальную обработку","data":{"error":"Request failed with status code 402","status":402}}
+{"timestamp":"2025-06-17T07:33:40.409Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:33:40.410Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"974ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:43.865Z","level":"info","message":"GET /test.html","data":{"status":304,"duration":"1ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:45.020Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"2ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:51.330Z","level":"info","message":"Получен запрос","data":{"sessionId":"session_1750145631330_ryjo5a0l5u","messageLength":26,"metadata":{}}}
+{"timestamp":"2025-06-17T07:33:52.575Z","level":"warning","message":"Ошибка DeepSeek API, используем локальную обработку","data":{"error":"Request failed with status code 402","status":402}}
+{"timestamp":"2025-06-17T07:33:52.576Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"session_1750145631330_ryjo5a0l5u","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:33:52.578Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1249ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:33:54.481Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750145634475","messageLength":19,"metadata":{}}}
+{"timestamp":"2025-06-17T07:33:55.193Z","level":"warning","message":"Ошибка DeepSeek API, используем локальную обработку","data":{"error":"Request failed with status code 402","status":402}}
+{"timestamp":"2025-06-17T07:33:55.194Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750145634475","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:33:55.195Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"714ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:40:05.386Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"1ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:40:23.244Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T07:40:29.690Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"8ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T07:40:39.065Z","level":"info","message":"GET /","data":{"status":304,"duration":"8ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:40:50.022Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":6,"metadata":{"timestamp":1750146049996,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:40:51.385Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":145}}
+{"timestamp":"2025-06-17T07:40:51.387Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:40:51.389Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1367ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:41:00.503Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":17,"metadata":{"timestamp":1750146060499,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:41:02.167Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":399}}
+{"timestamp":"2025-06-17T07:41:02.168Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:41:02.170Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1668ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:51:28.165Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"1ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T07:51:28.178Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-gemini-session","messageLength":25,"metadata":{}}}
+{"timestamp":"2025-06-17T07:51:29.762Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":286}}
+{"timestamp":"2025-06-17T07:51:29.763Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-gemini-session","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:51:29.764Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1586ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T07:51:29.768Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-gemini-session","messageLength":25,"metadata":{}}}
+{"timestamp":"2025-06-17T07:51:32.351Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":974}}
+{"timestamp":"2025-06-17T07:51:32.352Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-gemini-session","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:51:32.354Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2586ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T07:51:39.653Z","level":"info","message":"GET /","data":{"status":200,"duration":"3ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:52:00.083Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":32,"metadata":{"timestamp":1750146720080,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:52:01.961Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":404}}
+{"timestamp":"2025-06-17T07:52:01.962Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:52:01.964Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1881ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T07:52:44.612Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":47,"metadata":{"timestamp":1750146764608,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T07:52:46.310Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":313}}
+{"timestamp":"2025-06-17T07:52:46.311Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T07:52:46.313Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1701ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:12:05.695Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":30,"metadata":{"timestamp":1750147925691,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:12:08.170Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":374}}
+{"timestamp":"2025-06-17T08:12:08.171Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:12:08.173Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2478ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:13:38.255Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":12,"metadata":{"timestamp":1750148018251,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:13:40.095Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":528}}
+{"timestamp":"2025-06-17T08:13:40.096Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:13:40.099Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1844ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:13:56.185Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":13,"metadata":{"timestamp":1750148036179,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:13:58.348Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":479}}
+{"timestamp":"2025-06-17T08:13:58.349Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:13:58.352Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2167ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:15:34.971Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T08:15:41.693Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"24ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T08:18:17.391Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750148297328-0","messageLength":26,"metadata":{}}}
+{"timestamp":"2025-06-17T08:18:18.791Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":106}}
+{"timestamp":"2025-06-17T08:18:18.792Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750148297328-0","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:18:18.793Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1402ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:18:19.817Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750148299811-1","messageLength":30,"metadata":{}}}
+{"timestamp":"2025-06-17T08:18:20.681Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":130}}
+{"timestamp":"2025-06-17T08:18:20.683Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750148299811-1","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:18:20.684Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"867ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:18:21.695Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750148301693-2","messageLength":24,"metadata":{}}}
+{"timestamp":"2025-06-17T08:18:22.510Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":52}}
+{"timestamp":"2025-06-17T08:18:22.511Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750148301693-2","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:18:22.515Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"820ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:18:23.522Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750148303521-3","messageLength":26,"metadata":{}}}
+{"timestamp":"2025-06-17T08:18:24.141Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":46}}
+{"timestamp":"2025-06-17T08:18:24.142Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750148303521-3","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:18:24.143Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"621ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:18:25.154Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-session-1750148305151-4","messageLength":42,"metadata":{}}}
+{"timestamp":"2025-06-17T08:18:26.322Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":267}}
+{"timestamp":"2025-06-17T08:18:26.323Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-session-1750148305151-4","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:18:26.325Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1172ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:21:15.963Z","level":"info","message":"GET /","data":{"status":304,"duration":"2ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:21:30.900Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":34,"metadata":{"timestamp":1750148490898,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:21:32.494Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":194}}
+{"timestamp":"2025-06-17T08:21:32.496Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:21:32.497Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1597ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:21:57.438Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":32,"metadata":{"timestamp":1750148517433,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:21:59.299Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":274}}
+{"timestamp":"2025-06-17T08:21:59.300Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:21:59.302Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1864ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:23:30.605Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":15,"metadata":{"timestamp":1750148610601,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:23:31.987Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":172}}
+{"timestamp":"2025-06-17T08:23:31.988Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:23:31.990Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1385ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:23:52.495Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":34,"metadata":{"timestamp":1750148632489,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:23:53.719Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":198}}
+{"timestamp":"2025-06-17T08:23:53.721Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:23:53.724Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1229ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:27:25.801Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T08:27:31.488Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"9ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T08:28:00.425Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-all-products-1750148880341-0","messageLength":36,"metadata":{}}}
+{"timestamp":"2025-06-17T08:28:02.297Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":419}}
+{"timestamp":"2025-06-17T08:28:02.298Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-all-products-1750148880341-0","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:28:02.300Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1876ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:28:03.321Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-all-products-1750148883316-1","messageLength":27,"metadata":{}}}
+{"timestamp":"2025-06-17T08:28:04.809Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":499}}
+{"timestamp":"2025-06-17T08:28:04.812Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-all-products-1750148883316-1","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:28:04.815Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1495ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:28:05.836Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-all-products-1750148885833-2","messageLength":24,"metadata":{}}}
+{"timestamp":"2025-06-17T08:28:07.554Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":424}}
+{"timestamp":"2025-06-17T08:28:07.556Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-all-products-1750148885833-2","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:28:07.561Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1725ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:28:08.581Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-all-products-1750148888579-3","messageLength":31,"metadata":{}}}
+{"timestamp":"2025-06-17T08:28:09.950Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":478}}
+{"timestamp":"2025-06-17T08:28:09.951Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-all-products-1750148888579-3","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:28:09.952Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1371ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:28:10.965Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-all-products-1750148890962-4","messageLength":30,"metadata":{}}}
+{"timestamp":"2025-06-17T08:28:12.195Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":291}}
+{"timestamp":"2025-06-17T08:28:12.196Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-all-products-1750148890962-4","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:28:12.198Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1233ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:28:13.211Z","level":"info","message":"Получен запрос","data":{"sessionId":"test-all-products-1750148893208-5","messageLength":37,"metadata":{}}}
+{"timestamp":"2025-06-17T08:28:14.353Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":211}}
+{"timestamp":"2025-06-17T08:28:14.353Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test-all-products-1750148893208-5","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:28:14.355Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1144ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T08:31:11.836Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":11,"metadata":{"timestamp":1750149071831,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:31:13.148Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":112}}
+{"timestamp":"2025-06-17T08:31:13.149Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:31:13.151Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1315ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:31:39.466Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":55,"metadata":{"timestamp":1750149099463,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:31:40.687Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":141}}
+{"timestamp":"2025-06-17T08:31:40.688Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:31:40.691Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1225ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:31:59.613Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":39,"metadata":{"timestamp":1750149119608,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:32:01.099Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":314}}
+{"timestamp":"2025-06-17T08:32:01.100Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:32:01.101Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1488ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:32:25.547Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":34,"metadata":{"timestamp":1750149145543,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:32:27.326Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":338}}
+{"timestamp":"2025-06-17T08:32:27.329Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:32:27.333Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1786ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:33:01.627Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":78,"metadata":{"timestamp":1750149181624,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:33:03.140Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":188}}
+{"timestamp":"2025-06-17T08:33:03.143Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:33:03.144Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1517ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:33:43.811Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":82,"metadata":{"timestamp":1750149223808,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:33:45.096Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":161}}
+{"timestamp":"2025-06-17T08:33:45.097Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:33:45.100Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1289ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:35:52.970Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":110,"metadata":{"timestamp":1750149352966,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:35:54.391Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":134}}
+{"timestamp":"2025-06-17T08:35:54.392Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:35:54.395Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1425ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:36:20.562Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":33,"metadata":{"timestamp":1750149380558,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:36:22.915Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":708}}
+{"timestamp":"2025-06-17T08:36:22.916Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:36:22.918Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2356ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:36:56.969Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":17,"metadata":{"timestamp":1750149416966,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:36:58.747Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":268}}
+{"timestamp":"2025-06-17T08:36:58.748Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:36:58.749Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1780ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:37:29.538Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":30,"metadata":{"timestamp":1750149449534,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:37:31.832Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":683}}
+{"timestamp":"2025-06-17T08:37:31.834Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:37:31.837Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2299ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:37:52.826Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":22,"metadata":{"timestamp":1750149472823,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:37:54.166Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":89}}
+{"timestamp":"2025-06-17T08:37:54.167Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:37:54.169Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1343ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:38:04.610Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":3,"metadata":{"timestamp":1750149484607,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:38:06.017Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":125}}
+{"timestamp":"2025-06-17T08:38:06.017Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:38:06.019Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1409ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:38:17.713Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":24,"metadata":{"timestamp":1750149497710,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:38:18.964Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":116}}
+{"timestamp":"2025-06-17T08:38:18.965Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:38:18.967Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1254ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:38:39.139Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":42,"metadata":{"timestamp":1750149519134,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:38:40.413Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":186}}
+{"timestamp":"2025-06-17T08:38:40.414Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:38:40.415Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1276ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:38:50.601Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":17,"metadata":{"timestamp":1750149530597,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:38:51.871Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":126}}
+{"timestamp":"2025-06-17T08:38:51.872Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:38:51.873Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1273ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:39:16.233Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":67,"metadata":{"timestamp":1750149556229,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:39:17.542Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":159}}
+{"timestamp":"2025-06-17T08:39:17.543Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:39:17.545Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1312ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:39:45.708Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":32,"metadata":{"timestamp":1750149585701,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:39:47.179Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":194}}
+{"timestamp":"2025-06-17T08:39:47.180Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:39:47.182Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1474ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:40:01.938Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":4,"metadata":{"timestamp":1750149601933,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:40:03.417Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":198}}
+{"timestamp":"2025-06-17T08:40:03.418Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:40:03.421Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1483ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:40:13.201Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":10,"metadata":{"timestamp":1750149613197,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:40:14.853Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":251}}
+{"timestamp":"2025-06-17T08:40:14.855Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:40:14.858Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1657ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:40:45.290Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":23,"metadata":{"timestamp":1750149645285,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:40:46.250Z","level":"warning","message":"Ошибка Gemini API, используем локальную обработку","data":{"message":"Request failed with status code 400","status":400,"statusText":"Bad Request","data":{"error":{"code":400,"message":"User location is not supported for the API use.","status":"FAILED_PRECONDITION"}}}}
+{"timestamp":"2025-06-17T08:40:46.255Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:40:46.259Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"968ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T08:40:56.215Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","messageLength":8,"metadata":{"timestamp":1750149656213,"url":"http://localhost:3000/"}}}
+{"timestamp":"2025-06-17T08:40:56.596Z","level":"warning","message":"Ошибка Gemini API, используем локальную обработку","data":{"message":"Request failed with status code 400","status":400,"statusText":"Bad Request","data":{"error":{"code":400,"message":"User location is not supported for the API use.","status":"FAILED_PRECONDITION"}}}}
+{"timestamp":"2025-06-17T08:40:56.598Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1748857003816_3rp4xa0d6ll","source":"local","suggestionsCount":3}}
+{"timestamp":"2025-06-17T08:40:56.601Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"386ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:00:34.627Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:01:04.600Z","level":"info","message":"GET /","data":{"status":200,"duration":"9ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:01:06.883Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"2ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:01:24.262Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":18,"metadata":{"timestamp":1750158083936,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:01:25.554Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":27}}
+{"timestamp":"2025-06-17T11:01:25.555Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:01:25.558Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1296ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:02:02.018Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":30,"metadata":{"timestamp":1750158121728,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:02:03.236Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":125}}
+{"timestamp":"2025-06-17T11:02:03.237Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:02:03.240Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1222ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:02:31.727Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":70,"metadata":{"timestamp":1750158151400,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:02:32.980Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":171}}
+{"timestamp":"2025-06-17T11:02:32.982Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:02:32.986Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1259ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:04:30.346Z","level":"info","message":"GET /","data":{"status":200,"duration":"4ms","userAgent":"Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Mobile Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:04:35.790Z","level":"info","message":"GET /","data":{"status":304,"duration":"3ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:04:48.297Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":21,"metadata":{"timestamp":1750158288008,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:04:49.625Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":86}}
+{"timestamp":"2025-06-17T11:04:49.626Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:04:49.630Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1332ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:05:07.779Z","level":"info","message":"GET /","data":{"status":200,"duration":"4ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:05:08.217Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"3ms","userAgent":"Telegram/30884 CFNetwork/1494.0.7 Darwin/23.4.0","ip":"::1"}}
+{"timestamp":"2025-06-17T11:05:17.228Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","messageLength":12,"metadata":{"timestamp":1750158317392,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:05:18.112Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":40}}
+{"timestamp":"2025-06-17T11:05:18.114Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:05:18.117Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"889ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:05:27.718Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","messageLength":17,"metadata":{"timestamp":1750158327861,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:05:29.029Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":165}}
+{"timestamp":"2025-06-17T11:05:29.029Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:05:29.031Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1313ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:05:43.163Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","messageLength":33,"metadata":{"timestamp":1750158343323,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:05:44.403Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":187}}
+{"timestamp":"2025-06-17T11:05:44.405Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:05:44.409Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1246ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:06:05.711Z","level":"info","message":"GET /","data":{"status":200,"duration":"1ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:06:12.764Z","level":"info","message":"GET /","data":{"status":200,"duration":"2ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:06:12.931Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"1ms","userAgent":"Telegram/30884 CFNetwork/1494.0.7 Darwin/23.4.0","ip":"::1"}}
+{"timestamp":"2025-06-17T11:06:20.616Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","messageLength":13,"metadata":{"timestamp":1750158380782,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:06:21.827Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":88}}
+{"timestamp":"2025-06-17T11:06:21.828Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:06:21.830Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1214ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:06:29.280Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","messageLength":13,"metadata":{"timestamp":1750158389445,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:06:30.476Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":162}}
+{"timestamp":"2025-06-17T11:06:30.477Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:06:30.479Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1199ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:08:15.459Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"2ms","userAgent":"Telegram/30884 CFNetwork/1494.0.7 Darwin/23.4.0","ip":"::1"}}
+{"timestamp":"2025-06-17T11:08:22.888Z","level":"info","message":"GET /","data":{"status":200,"duration":"2ms","userAgent":"Mozilla/5.0 (Linux; Android 15; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.7151.89 Mobile Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:08:24.105Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"2ms","userAgent":"Mozilla/5.0 (Linux; Android 15; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.7151.89 Mobile Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:08:43.846Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"1ms","userAgent":"Telegram/30884 CFNetwork/1494.0.7 Darwin/23.4.0","ip":"::1"}}
+{"timestamp":"2025-06-17T11:09:56.385Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"3ms","userAgent":"Telegram/30884 CFNetwork/3826.500.131 Darwin/24.5.0","ip":"::1"}}
+{"timestamp":"2025-06-17T11:09:57.723Z","level":"info","message":"GET /","data":{"status":200,"duration":"5ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:09:58.665Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"2ms","userAgent":"Telegram/30884 CFNetwork/3826.500.131 Darwin/24.5.0","ip":"::1"}}
+{"timestamp":"2025-06-17T11:12:13.751Z","level":"info","message":"GET /","data":{"status":200,"duration":"2ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:12:14.539Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"1ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:17:47.094Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","messageLength":6,"metadata":{"timestamp":1750159068286,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:17:48.268Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":89}}
+{"timestamp":"2025-06-17T11:17:48.270Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:17:48.274Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1180ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:17:51.825Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","messageLength":2,"metadata":{"timestamp":1750159073355,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:17:52.661Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":147}}
+{"timestamp":"2025-06-17T11:17:52.663Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:17:52.664Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"839ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:17:58.207Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","messageLength":6,"metadata":{"timestamp":1750159079740,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:17:59.987Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":378}}
+{"timestamp":"2025-06-17T11:17:59.989Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:17:59.993Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1786ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:18:11.463Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","messageLength":19,"metadata":{"timestamp":1750159092892,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:18:12.625Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":114}}
+{"timestamp":"2025-06-17T11:18:12.626Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:18:12.627Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1164ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:18:20.014Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","messageLength":6,"metadata":{"timestamp":1750159101439,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:18:21.280Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":201}}
+{"timestamp":"2025-06-17T11:18:21.281Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:18:21.283Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1269ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:18:30.148Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","messageLength":8,"metadata":{"timestamp":1750159111530,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:18:32.037Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":517}}
+{"timestamp":"2025-06-17T11:18:32.038Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158735928_m9hxvufrpo","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:18:32.041Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1893ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T11:45:03.198Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":26,"metadata":{"timestamp":1750160703023,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:45:04.465Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":109}}
+{"timestamp":"2025-06-17T11:45:04.467Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:45:04.471Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1273ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:45:25.787Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":53,"metadata":{"timestamp":1750160726166,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:45:27.404Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":318}}
+{"timestamp":"2025-06-17T11:45:27.407Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:45:27.411Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1624ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:45:46.742Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":19,"metadata":{"timestamp":1750160747124,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:45:47.899Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":109}}
+{"timestamp":"2025-06-17T11:45:47.900Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:45:47.902Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1160ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:45:59.264Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":19,"metadata":{"timestamp":1750160759633,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:46:00.346Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":109}}
+{"timestamp":"2025-06-17T11:46:00.347Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:46:00.349Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1085ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:46:17.224Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":19,"metadata":{"timestamp":1750160777614,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:46:18.445Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":109}}
+{"timestamp":"2025-06-17T11:46:18.447Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:46:18.450Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1226ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:46:47.060Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":31,"metadata":{"timestamp":1750160807439,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:46:48.187Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":109}}
+{"timestamp":"2025-06-17T11:46:48.189Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:46:48.193Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1132ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:47:15.763Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":16,"metadata":{"timestamp":1750160836143,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:47:17.219Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":248}}
+{"timestamp":"2025-06-17T11:47:17.220Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:47:17.222Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1459ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:47:39.156Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":8,"metadata":{"timestamp":1750160859540,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:47:40.863Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":332}}
+{"timestamp":"2025-06-17T11:47:40.864Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:47:40.865Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1709ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:48:27.608Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":30,"metadata":{"timestamp":1750160907997,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:48:28.730Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":75}}
+{"timestamp":"2025-06-17T11:48:28.731Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:48:28.732Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1124ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:48:42.380Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","messageLength":19,"metadata":{"timestamp":1750160922758,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T11:48:43.709Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":202}}
+{"timestamp":"2025-06-17T11:48:43.710Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158598974_mn3qefbuv8k","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:48:43.711Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1331ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 18_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/18.5 Mobile/22F76 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T11:50:36.768Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:50:55.818Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:51:06.359Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:51:06.725Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:51:47.227Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:52:22.031Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:52:24.646Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:53:00.722Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:53:05.940Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"8ms","userAgent":"Mozilla/5.0 (Windows NT; Windows NT 10.0; ru-RU) WindowsPowerShell/5.1.26100.4202","ip":"::1"}}
+{"timestamp":"2025-06-17T11:53:11.584Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"1ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:53:11.616Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161191591","messageLength":35,"metadata":{}}}
+{"timestamp":"2025-06-17T11:53:12.954Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":182}}
+{"timestamp":"2025-06-17T11:53:12.955Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161191591","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:53:12.958Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1342ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:53:12.965Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161192962","messageLength":29,"metadata":{}}}
+{"timestamp":"2025-06-17T11:53:13.718Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":160}}
+{"timestamp":"2025-06-17T11:53:13.721Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161192962","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:53:13.727Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"762ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:53:13.736Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161193732","messageLength":32,"metadata":{}}}
+{"timestamp":"2025-06-17T11:53:14.619Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":213}}
+{"timestamp":"2025-06-17T11:53:14.620Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161193732","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:53:14.622Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"886ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:53:14.626Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161194624","messageLength":29,"metadata":{}}}
+{"timestamp":"2025-06-17T11:53:15.697Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":158}}
+{"timestamp":"2025-06-17T11:53:15.699Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161194624","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:53:15.701Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1075ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:53:15.705Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161195703","messageLength":33,"metadata":{}}}
+{"timestamp":"2025-06-17T11:53:16.554Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":194}}
+{"timestamp":"2025-06-17T11:53:16.556Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161195703","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:53:16.560Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"854ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:53:16.567Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161196565","messageLength":24,"metadata":{}}}
+{"timestamp":"2025-06-17T11:53:18.109Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":530}}
+{"timestamp":"2025-06-17T11:53:18.113Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161196565","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:53:18.115Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1548ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:53:52.009Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:54:01.863Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:54:12.358Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:54:13.072Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:54:19.996Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:54:20.326Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:54:27.396Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"9ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:54:27.423Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161267403","messageLength":35,"metadata":{}}}
+{"timestamp":"2025-06-17T11:54:29.361Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"В состав VITAHUB Energy входят: Инозитол, Холин, Кофеин, Рибофлавин (B2) и подсластитель сукралоза.\n\n⚠️ Важно помнить о противопоказаниях: продукты VITAHUB противопоказаны беременным и кормящим женщин"}}
+{"timestamp":"2025-06-17T11:54:29.363Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161267403","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:54:29.365Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1943ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:54:29.369Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161269367","messageLength":29,"metadata":{}}}
+{"timestamp":"2025-06-17T11:54:30.469Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":357}}
+{"timestamp":"2025-06-17T11:54:30.472Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161269367","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:54:30.478Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1108ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:54:30.485Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161270481","messageLength":32,"metadata":{}}}
+{"timestamp":"2025-06-17T11:54:31.861Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"VITAHUB Antistress содержит: Триптофан, Глицин, Мелатонин, Таурин, Цитрат магния (содержит магний), а также подсластитель сукралоза.\n\n⚠️ Пожалуйста, обратите внимание на противопоказания: продукты VIT"}}
+{"timestamp":"2025-06-17T11:54:31.863Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161270481","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:54:31.865Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1381ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:54:31.869Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161271867","messageLength":29,"metadata":{}}}
+{"timestamp":"2025-06-17T11:54:33.243Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"VITAHUB Energy стоит от 300 до 400 рублей за банку. Купить можно на официальном сайте vitahub.ru, на Wildberries, Ozon, а также в Спортмастере и Дикси.\n\nПомните, что продукты VITAHUB ПРОТИВОПОКАЗАНЫ б"}}
+{"timestamp":"2025-06-17T11:54:33.245Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161271867","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:54:33.247Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1378ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:54:33.251Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161273249","messageLength":33,"metadata":{}}}
+{"timestamp":"2025-06-17T11:54:34.097Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"VITAHUB противопоказан беременным и кормящим женщинам. VITAHUB не лечит заболевания и не является лекарством, это БАД для поддержки здоровья. Обязательно проконсультируйтесь с врачом."}}
+{"timestamp":"2025-06-17T11:54:34.098Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161273249","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:54:34.100Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"849ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:54:34.103Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161274102","messageLength":24,"metadata":{}}}
+{"timestamp":"2025-06-17T11:54:35.796Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"VITAHUB Antistress содержит триптофан, который участвует в выработке серотонина, а это может способствовать повышению настроения. Также в составе есть глицин и магний, которые успокаивают нервную сист"}}
+{"timestamp":"2025-06-17T11:54:35.798Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161274102","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:54:35.800Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1697ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:54:58.621Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:55:05.753Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"8ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:05.775Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161305760","messageLength":35,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:07.766Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"В состав VITAHUB Energy входят: Инозитол, Холин, Кофеин, Рибофлавин (B2) и подсластитель сукралоза.\n\n⚠️ Важно помнить, что продукты VITAHUB ПРОТИВОПОКАЗАНЫ беременным и кормящим женщинам, а также не р"}}
+{"timestamp":"2025-06-17T11:55:07.768Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161305760","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:07.770Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1996ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:07.775Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161307773","messageLength":29,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:09.090Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":405}}
+{"timestamp":"2025-06-17T11:55:09.092Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161307773","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:09.096Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1321ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:09.101Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161309099","messageLength":32,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:10.423Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"VITAHUB Antistress содержит: Триптофан, Глицин, Мелатонин, Таурин, Цитрат магния (содержит магний) и подсластитель сукралоза.\n\n⚠️ Пожалуйста, помните о противопоказаниях: продукты VITAHUB противопоказ"}}
+{"timestamp":"2025-06-17T11:55:10.425Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161309099","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:10.427Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1326ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:10.433Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161310431","messageLength":29,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:12.002Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"VITAHUB Energy стоит от 300 до 400 рублей за банку. Его можно приобрести на официальном сайте vitahub.ru, маркетплейсах Wildberries и Ozon, а также в розничных сетях Спортмастер и Дикси.\n\nПожалуйста, "}}
+{"timestamp":"2025-06-17T11:55:12.004Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161310431","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:12.006Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1573ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:12.012Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161312009","messageLength":33,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:13.029Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"Продукты VITAHUB ПРОТИВОПОКАЗАНЫ беременным и кормящим женщинам. Перед употреблением любых БАДов во время беременности необходима консультация врача. VITAHUB НЕ ЛЕЧИТ заболевания и НЕ ЯВЛЯЕТСЯ ЛЕКАРСТ"}}
+{"timestamp":"2025-06-17T11:55:13.031Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161312009","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:13.033Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1021ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:13.037Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161313036","messageLength":24,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:14.776Z","level":"warning","message":"Недопустимый ответ от Gemini AI - используем локальный","data":{"reason":"Недопустимое утверждение: \"лечит\"","originalResponse":"VITAHUB Antistress содержит триптофан, который участвует в выработке серотонина, известного как \"гормон счастья\", и может способствовать повышению настроения. Также в составе есть глицин и магний, кот"}}
+{"timestamp":"2025-06-17T11:55:14.778Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161313036","source":"local_fallback","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:14.780Z","level":"warning","message":"Недопустимый ответ от AI","data":{"reason":"Недопустимое утверждение: \"лечит\""}}
+{"timestamp":"2025-06-17T11:55:14.782Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1745ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:36.218Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T11:55:43.191Z","level":"info","message":"GET /api/health","data":{"status":200,"duration":"7ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:43.214Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161343198","messageLength":35,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:45.065Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":457}}
+{"timestamp":"2025-06-17T11:55:45.066Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161343198","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:45.068Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1854ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:45.073Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161345071","messageLength":29,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:46.266Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":381}}
+{"timestamp":"2025-06-17T11:55:46.267Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161345071","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:46.269Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1196ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:46.273Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161346272","messageLength":32,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:47.550Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":456}}
+{"timestamp":"2025-06-17T11:55:47.552Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161346272","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:47.556Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1283ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:47.566Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161347562","messageLength":29,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:48.788Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":464}}
+{"timestamp":"2025-06-17T11:55:48.790Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161347562","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:48.794Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1228ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:48.800Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161348798","messageLength":33,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:49.535Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":122}}
+{"timestamp":"2025-06-17T11:55:49.538Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161348798","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:49.544Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"744ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T11:55:49.553Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_session_1750161349551","messageLength":24,"metadata":{}}}
+{"timestamp":"2025-06-17T11:55:51.023Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":555}}
+{"timestamp":"2025-06-17T11:55:51.025Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_session_1750161349551","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T11:55:51.027Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1474ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:07:24.678Z","level":"info","message":"Получен запрос","data":{"sessionId":"session_1750162044678_6f25be76mgv","messageLength":27,"metadata":{}}}
+{"timestamp":"2025-06-17T12:07:27.431Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":991}}
+{"timestamp":"2025-06-17T12:07:27.432Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"session_1750162044678_6f25be76mgv","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:07:27.434Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2756ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:07:38.842Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:10:03.005Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:10:31.246Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:11:30.879Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:12:42.031Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:12:56.721Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162376672","messageLength":30,"metadata":{}}}
+{"timestamp":"2025-06-17T12:12:58.484Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":394}}
+{"timestamp":"2025-06-17T12:12:58.485Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162376672","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:12:58.491Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1770ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:12:59.518Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162379514","messageLength":24,"metadata":{}}}
+{"timestamp":"2025-06-17T12:13:01.165Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":702}}
+{"timestamp":"2025-06-17T12:13:01.167Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162379514","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:13:01.168Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1651ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:13:02.179Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162382177","messageLength":25,"metadata":{}}}
+{"timestamp":"2025-06-17T12:13:03.222Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":379}}
+{"timestamp":"2025-06-17T12:13:03.225Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162382177","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:13:03.229Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1050ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:13:04.251Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162384248","messageLength":31,"metadata":{}}}
+{"timestamp":"2025-06-17T12:13:05.833Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":563}}
+{"timestamp":"2025-06-17T12:13:05.836Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162384248","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:13:05.838Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1587ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:13:06.851Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162386844","messageLength":27,"metadata":{}}}
+{"timestamp":"2025-06-17T12:13:08.782Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":853}}
+{"timestamp":"2025-06-17T12:13:08.784Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162386844","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:13:08.786Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1935ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:13:09.790Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162389788","messageLength":35,"metadata":{}}}
+{"timestamp":"2025-06-17T12:13:12.136Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":1188}}
+{"timestamp":"2025-06-17T12:13:12.137Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162389788","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:13:12.138Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2348ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:13:13.155Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162393153","messageLength":25,"metadata":{}}}
+{"timestamp":"2025-06-17T12:13:14.629Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":594}}
+{"timestamp":"2025-06-17T12:13:14.630Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162393153","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:13:14.632Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1478ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:13:15.640Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162395638","messageLength":30,"metadata":{}}}
+{"timestamp":"2025-06-17T12:13:17.702Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":913}}
+{"timestamp":"2025-06-17T12:13:17.703Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162395638","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:13:17.705Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2065ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:13:30.987Z","level":"info","message":"Получен запрос","data":{"sessionId":"test123","messageLength":6,"metadata":{}}}
+{"timestamp":"2025-06-17T12:13:32.425Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":265}}
+{"timestamp":"2025-06-17T12:13:32.426Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test123","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:13:32.428Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1441ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:13:53.341Z","level":"info","message":"Получен запрос","data":{"sessionId":"test123","messageLength":6,"metadata":{}}}
+{"timestamp":"2025-06-17T12:13:54.551Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":265}}
+{"timestamp":"2025-06-17T12:13:54.552Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test123","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:13:54.553Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1212ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:13:59.369Z","level":"info","message":"Получен запрос","data":{"sessionId":"test123","messageLength":6,"metadata":{}}}
+{"timestamp":"2025-06-17T12:14:00.189Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":265}}
+{"timestamp":"2025-06-17T12:14:00.191Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test123","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:14:00.195Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"826ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:14:04.345Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:14:06.786Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:14:19.057Z","level":"info","message":"Получен запрос","data":{"sessionId":"test123","messageLength":6,"metadata":{}}}
+{"timestamp":"2025-06-17T12:14:20.622Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":292}}
+{"timestamp":"2025-06-17T12:14:20.623Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test123","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:14:20.627Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1569ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:15:45.123Z","level":"info","message":"Получен запрос","data":{"sessionId":"test123","messageLength":6,"metadata":{}}}
+{"timestamp":"2025-06-17T12:15:46.827Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":497}}
+{"timestamp":"2025-06-17T12:15:46.828Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test123","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:15:46.830Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1707ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:15:56.992Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:16:05.186Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:16:09.778Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162569733","messageLength":30,"metadata":{}}}
+{"timestamp":"2025-06-17T12:16:11.656Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":572}}
+{"timestamp":"2025-06-17T12:16:11.657Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162569733","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:16:11.663Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1884ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:16:12.680Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162572677","messageLength":24,"metadata":{}}}
+{"timestamp":"2025-06-17T12:16:14.376Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":690}}
+{"timestamp":"2025-06-17T12:16:14.377Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162572677","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:16:14.379Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1699ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:16:15.387Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162575385","messageLength":25,"metadata":{}}}
+{"timestamp":"2025-06-17T12:16:16.312Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":326}}
+{"timestamp":"2025-06-17T12:16:16.312Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162575385","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:16:16.314Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"927ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:16:17.320Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162577318","messageLength":31,"metadata":{}}}
+{"timestamp":"2025-06-17T12:16:19.100Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":652}}
+{"timestamp":"2025-06-17T12:16:19.102Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162577318","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:16:19.105Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1785ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:16:20.127Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162580125","messageLength":27,"metadata":{}}}
+{"timestamp":"2025-06-17T12:16:22.002Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":792}}
+{"timestamp":"2025-06-17T12:16:22.003Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162580125","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:16:22.005Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1878ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:16:23.024Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162583018","messageLength":35,"metadata":{}}}
+{"timestamp":"2025-06-17T12:16:25.253Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":944}}
+{"timestamp":"2025-06-17T12:16:25.254Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162583018","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:16:25.256Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2233ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:16:26.268Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162586265","messageLength":25,"metadata":{}}}
+{"timestamp":"2025-06-17T12:16:27.649Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":522}}
+{"timestamp":"2025-06-17T12:16:27.650Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162586265","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:16:27.652Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1384ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:16:28.661Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162588657","messageLength":30,"metadata":{}}}
+{"timestamp":"2025-06-17T12:16:30.083Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":636}}
+{"timestamp":"2025-06-17T12:16:30.085Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162588657","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:16:30.090Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1428ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:16:43.816Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:16:57.842Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:17:06.899Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:17:12.579Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162632527","messageLength":30,"metadata":{}}}
+{"timestamp":"2025-06-17T12:17:14.595Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":464}}
+{"timestamp":"2025-06-17T12:17:14.596Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162632527","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:17:14.600Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2022ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:17:15.634Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162635627","messageLength":24,"metadata":{}}}
+{"timestamp":"2025-06-17T12:17:17.174Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":652}}
+{"timestamp":"2025-06-17T12:17:17.175Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162635627","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:17:17.177Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1543ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:17:18.198Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162638193","messageLength":25,"metadata":{}}}
+{"timestamp":"2025-06-17T12:17:19.099Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":308}}
+{"timestamp":"2025-06-17T12:17:19.100Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162638193","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:17:19.103Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"905ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:17:20.112Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162640105","messageLength":31,"metadata":{}}}
+{"timestamp":"2025-06-17T12:17:21.828Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":656}}
+{"timestamp":"2025-06-17T12:17:21.831Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162640105","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:17:21.839Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1727ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:17:22.860Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162642853","messageLength":27,"metadata":{}}}
+{"timestamp":"2025-06-17T12:17:24.814Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":977}}
+{"timestamp":"2025-06-17T12:17:24.815Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162642853","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:17:24.817Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1957ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:17:25.842Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162645831","messageLength":35,"metadata":{}}}
+{"timestamp":"2025-06-17T12:17:28.820Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":1453}}
+{"timestamp":"2025-06-17T12:17:28.821Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162645831","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:17:28.822Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"2980ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:17:29.830Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162649824","messageLength":25,"metadata":{}}}
+{"timestamp":"2025-06-17T12:17:31.782Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":721}}
+{"timestamp":"2025-06-17T12:17:31.783Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162649824","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:17:31.785Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1955ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:17:32.795Z","level":"info","message":"Получен запрос","data":{"sessionId":"test_1750162652787","messageLength":30,"metadata":{}}}
+{"timestamp":"2025-06-17T12:17:34.603Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":931}}
+{"timestamp":"2025-06-17T12:17:34.605Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"test_1750162652787","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:17:34.606Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1811ms","userAgent":"axios/1.8.4","ip":"::1"}}
+{"timestamp":"2025-06-17T12:23:39.560Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":17,"metadata":{"timestamp":1750163018336,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T12:23:41.136Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":361}}
+{"timestamp":"2025-06-17T12:23:41.137Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:23:41.139Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1579ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T12:24:18.268Z","level":"info","message":"Сервер запущен","data":{"port":3000,"version":"3.0.0","geminiConfigured":true}}
+{"timestamp":"2025-06-17T12:24:22.918Z","level":"info","message":"GET /","data":{"status":304,"duration":"10ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T12:24:30.346Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":17,"metadata":{"timestamp":1750163070055,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T12:24:31.516Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":134}}
+{"timestamp":"2025-06-17T12:24:31.517Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:24:31.520Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1175ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T12:24:53.322Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":53,"metadata":{"timestamp":1750163092991,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T12:24:54.653Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":190}}
+{"timestamp":"2025-06-17T12:24:54.654Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:24:54.657Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1335ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T12:25:08.136Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":26,"metadata":{"timestamp":1750163107848,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T12:25:09.670Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":245}}
+{"timestamp":"2025-06-17T12:25:09.671Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:25:09.672Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1536ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T12:25:31.885Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":47,"metadata":{"timestamp":1750163131551,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T12:25:33.379Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":150}}
+{"timestamp":"2025-06-17T12:25:33.381Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:25:33.383Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1498ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T12:39:01.242Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","messageLength":8,"metadata":{"timestamp":1750163939972,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T12:39:02.603Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":98}}
+{"timestamp":"2025-06-17T12:39:02.604Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158066415_9ng7l76ru9","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T12:39:02.607Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1364ms","userAgent":"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 YaBrowser/25.4.0.0 Safari/537.36","ip":"::1"}}
+{"timestamp":"2025-06-17T14:12:31.503Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"5ms","userAgent":"Telegram/30884 CFNetwork/1494.0.7 Darwin/23.4.0","ip":"::1"}}
+{"timestamp":"2025-06-17T14:12:33.718Z","level":"info","message":"GET /","data":{"status":200,"duration":"12ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T14:12:46.305Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","messageLength":15,"metadata":{"timestamp":1750169566512,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T14:12:47.456Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":43}}
+{"timestamp":"2025-06-17T14:12:47.458Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750158309069_l8vdexpglnh","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T14:12:47.466Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1160ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/15E148 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T19:20:18.792Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"2ms","userAgent":"Telegram/30884 CFNetwork/1494.0.7 Darwin/23.4.0","ip":"::1"}}
+{"timestamp":"2025-06-17T19:20:19.587Z","level":"info","message":"GET /","data":{"status":200,"duration":"2ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/21E236 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T19:20:21.140Z","level":"info","message":"GET /favicon.ico","data":{"status":404,"duration":"3ms","userAgent":"Telegram/30884 CFNetwork/1494.0.7 Darwin/23.4.0","ip":"::1"}}
+{"timestamp":"2025-06-17T19:20:31.632Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750188021633_p62gf2lqhrq","messageLength":18,"metadata":{"timestamp":1750188032273,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T19:20:33.183Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":167}}
+{"timestamp":"2025-06-17T19:20:33.184Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750188021633_p62gf2lqhrq","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T19:20:33.185Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1553ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/21E236 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T19:20:47.678Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750188021633_p62gf2lqhrq","messageLength":22,"metadata":{"timestamp":1750188048300,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T19:20:49.533Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":396}}
+{"timestamp":"2025-06-17T19:20:49.534Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750188021633_p62gf2lqhrq","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T19:20:49.536Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1857ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/21E236 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T19:21:06.608Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750188021633_p62gf2lqhrq","messageLength":22,"metadata":{"timestamp":1750188067249,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T19:21:08.197Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":296}}
+{"timestamp":"2025-06-17T19:21:08.198Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750188021633_p62gf2lqhrq","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T19:21:08.200Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1592ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/21E236 Safari/604.1","ip":"::1"}}
+{"timestamp":"2025-06-17T19:21:23.428Z","level":"info","message":"Получен запрос","data":{"sessionId":"vitahub_1750188021633_p62gf2lqhrq","messageLength":23,"metadata":{"timestamp":1750188084066,"url":"https://1b2b-45-91-237-103.ngrok-free.app/"}}}
+{"timestamp":"2025-06-17T19:21:24.639Z","level":"info","message":"Успешный ответ от Gemini API","data":{"responseLength":74}}
+{"timestamp":"2025-06-17T19:21:24.641Z","level":"info","message":"Отправлен ответ пользователю","data":{"sessionId":"vitahub_1750188021633_p62gf2lqhrq","source":"gemini","suggestionsCount":3}}
+{"timestamp":"2025-06-17T19:21:24.645Z","level":"info","message":"POST /api/chat","data":{"status":200,"duration":"1217ms","userAgent":"Mozilla/5.0 (iPhone; CPU iPhone OS 17_4_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/17.4.1 Mobile/21E236 Safari/604.1","ip":"::1"}}
