@@ -1,3 +1,83 @@
+# Assistant Bot (Gemini) — consultant-it.ru
+
+Стек: Node.js (Express) + Google Gemini API, встраиваемый виджет (Shadow DOM).
+
+## Структура
+
+```
+server.js               # основной сервер (API, SSE, лид-капчер)
+src/rateByToken.js      # лимитер по токену/домену/IP
+public/widget.js        # скрипт виджета для вставки на сайт
+package.json            # зависимости и скрипты
+Dockerfile              # образ для деплоя
+docker-compose.yml      # локальный/прод запуск
+```
+
+## Установка
+
+```bash
+npm ci
+# или
+npm install
+```
+
+## Переменные окружения
+
+Обязательные:
+- `GEMINI_API_KEY` — ключ Google Generative Language API
+
+Опциональные/рекомендуемые:
+- `PORT` (по умолчанию 8080)
+- `ALLOWED_ORIGINS` — список доменов, которым разрешены запросы (через запятую)
+- `CLIENT_TOKEN` — общий токен виджета (передаётся в заголовке `X-Client-Token`)
+- `LEADS_EMAIL_TO`, `SMTP_HOST`, `SMTP_USER`, `SMTP_PASS` — для отправки заявок на почту
+
+## Запуск (локально)
+
+```bash
+PORT=8080 GEMINI_API_KEY=*** node server.js
+```
+
+Проверка:
+```
+GET http://localhost:8080/health  -> {"ok":true}
+```
+
+## Вставка виджета на сайт
+
+```html
+<script
+  defer
+  src="https://bot.example.com/public/widget.js"
+  data-server="https://bot.example.com"
+  data-company="consultant-it"
+  data-theme="auto"
+  data-token="public-widget-token-123"
+  data-stream="1">
+</script>
+```
+
+## Эндпоинты
+
+- `POST /v1/chat` — синхронный ответ
+- `GET /v1/chat/stream` — SSE-стрим ответов
+- `POST /v1/lead` — (опционально) приём заявок и отправка на почту
+- `GET /health` — проверка состояния
+
+## Деплой (Docker)
+
+```bash
+docker compose up -d --build
+```
+
+За прокси (Nginx) выдать домен `bot.example.com` и проксировать на `127.0.0.1:8080`.
+
+## Источник контента ассистента
+
+Ассистент обучен отвечать по услугам компании, используя публичную информацию:
+
+- https://consultant-it.ru
+
 # VITAHUB Chatbot v2.0 - Улучшенный AI-ассистент для сайта на Tilda
 
 Этот проект представляет собой продвинутый чат-бот на основе модели Google Gemini, специально разработанный для интеграции с сайтами на платформе Tilda. Бот обучен отвечать на вопросы о всей линейке продуктов VITAHUB (Energy, Detox, Antistress).
@@ -289,5 +369,6 @@ newProduct: {
 ---
 
 **VITAHUB Chatbot v2.0** - современное решение для интеграции AI-ассистента с вашим сайтом на Tilda. Легко настраивается, полностью адаптивен и готов к работе!
-#   1  
+#   1 
+ 
  

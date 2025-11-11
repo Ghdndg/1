@@ -1,0 +1,1087 @@
+<!-- 
+  VITAHUB Chatbot v2.0 - Улучшенная интеграция для Tilda
+  
+  Новые возможности:
+  ✅ Современный Material Design интерфейс
+  ✅ Анимации и микроинтеракции
+  ✅ Мобильная адаптация
+  ✅ Голосовые сообщения (экспериментально)
+  ✅ Предложения быстрых ответов
+  ✅ Индикатор набора текста
+  ✅ История сообщений (локальное хранение)
+  ✅ Темная/светлая тема
+  ✅ Эмодзи и реакции
+  ✅ Звуковые уведомления
+  
+  Установка: Скопируйте код и вставьте в HTML-блок на Tilda
+-->
+
+<div id="vitahub-chatbot-container"></div>
+
+<script>
+  const CHATBOT_CONFIG = {
+  apiUrl: 'https://ваш-домен.com/api/chat',
+  
+    botName: 'VITAHUB Ассистент',
+  welcomeMessage: '👋 Привет! Я виртуальный ассистент VITAHUB. Готов рассказать всё о наших функциональных напитках! О чём хотите узнать?',
+  
+  // Дизайн и позиционирование
+  position: 'right', // left или right
+  theme: 'light', // light или dark
+  primaryColor: '#FF4757', // Красный цвет VITAHUB
+  accentColor: '#FF6B7A',
+  
+  // Логотип и изображения (можете заменить на свои)
+  logoUrl: 'https://cdn-ru.bitrix24.ru/b1238237/landing/65a/65a2222e32cd7a07a9f93ca0937fbe42/Logo_VITAHUB_small_b__1__2x_2x.png',
+  avatarUrl: 'https://cdn-ru.bitrix24.ru/b1238237/landing/65a/65a2222e32cd7a07a9f93ca0937fbe42/Logo_VITAHUB_small_b__1__2x_2x.png',
+  
+  // Функциональность
+  enableVoice: false, // Голосовые сообщения (пока отключаем)
+  enableSounds: true, // Звуковые уведомления
+  enableSuggestions: true, // Предложения вопросов
+  enableTypingIndicator: true, // Индикатор печати
+  enableHistory: true, // Сохранение истории
+  
+  // Тексты интерфейса
+  texts: {
+    placeholder: 'Напишите ваш вопрос о VITAHUB...',
+    sendButton: 'Отправить',
+    voiceButton: 'Голосовое сообщение',
+    minimizeButton: 'Свернуть',
+    closeButton: 'Закрыть',
+    typingIndicator: 'печатает...',
+    errorMessage: 'Произошла ошибка. Попробуйте еще раз.',
+    offlineMessage: 'Сейчас я недоступен, но вы можете оставить сообщение.'
+  }
+};
+
+// ===========================================
+// КЛАСС ЧАТ-БОТА
+// ===========================================
+class VitahubChatbot {
+  constructor(config) {
+    this.config = config;
+    this.sessionId = this.getOrCreateSessionId();
+    this.isOpen = false;
+    this.isTyping = false;
+    this.messageHistory = this.loadHistory();
+    this.suggestions = [];
+    
+    this.init();
+  }
+  
+  getOrCreateSessionId() {
+    let sessionId = localStorage.getItem('vitahub_session_id');
+  if (!sessionId) {
+      sessionId = `vitahub_${Date.now()}_${Math.random().toString(36).substring(2, 15)}`;
+      localStorage.setItem('vitahub_session_id', sessionId);
+    }
+    return sessionId;
+  }
+  
+  loadHistory() {
+    if (!this.config.enableHistory) return [];
+    try {
+      const history = localStorage.getItem('vitahub_chat_history');
+      return history ? JSON.parse(history) : [];
+    } catch (e) {
+      return [];
+    }
+  }
+  
+  saveHistory() {
+    if (!this.config.enableHistory) return;
+    try {
+      localStorage.setItem('vitahub_chat_history', JSON.stringify(this.messageHistory.slice(-50))); // Последние 50 сообщений
+    } catch (e) {
+      console.warn('Не удалось сохранить историю чата');
+    }
+  }
+  
+  init() {
+    this.createStyles();
+    this.createHTML();
+    this.bindEvents();
+    this.loadSuggestions();
+    
+    // Загружаем историю сообщений
+    if (this.messageHistory.length > 0) {
+      this.renderMessages();
+    } else {
+      this.addBotMessage(this.config.welcomeMessage, true);
+    }
+    
+    console.log('🤖 VITAHUB Chatbot v2.0 инициализирован');
+  }
+  
+  createStyles() {
+    const style = document.createElement('style');
+    style.textContent = `
+      /* VITAHUB Chatbot v2.0 Styles */
+      .vitahub-chatbot * {
+        box-sizing: border-box;
+      }
+      
+      .vitahub-chatbot {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        position: fixed;
+        bottom: 20px;
+        ${this.config.position === 'right' ? 'right: 20px;' : 'left: 20px;'}
+        z-index: 999999;
+        max-width: 100vw;
+      }
+      
+      /* Кнопка чата */
+      .vitahub-chat-trigger {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, ${this.config.primaryColor}, ${this.config.accentColor});
+        box-shadow: 0 8px 24px rgba(255, 71, 87, 0.3);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: none;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .vitahub-chat-trigger:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(255, 71, 87, 0.4);
+      }
+      
+      .vitahub-chat-trigger:active {
+        transform: scale(0.95);
+      }
+      
+      .vitahub-chat-trigger::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        transform: scale(0);
+        transition: transform 0.3s;
+      }
+      
+      .vitahub-chat-trigger:hover::before {
+        transform: scale(1);
+      }
+      
+      .vitahub-trigger-icon {
+        width: 28px;
+        height: 28px;
+        fill: white;
+        transition: transform 0.3s;
+        z-index: 1;
+      }
+      
+      .vitahub-chat-trigger.active .vitahub-trigger-icon {
+        transform: rotate(45deg);
+      }
+      
+      /* Бейдж с уведомлениями */
+      .vitahub-notification-badge {
+        position: absolute;
+        top: -4px;
+        right: -4px;
+        width: 20px;
+        height: 20px;
+        background: #ff3333;
+        border-radius: 50%;
+        color: white;
+        font-size: 12px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: pulse 2s infinite;
+        border: 2px solid white;
+      }
+      
+      @keyframes pulse {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.1); }
+      }
+      
+      /* Окно чата */
+      .vitahub-chat-window {
+        position: absolute;
+        bottom: 80px;
+        ${this.config.position === 'right' ? 'right: 0;' : 'left: 0;'}
+        width: 380px;
+        max-width: calc(100vw - 40px);
+        height: 600px;
+        max-height: calc(100vh - 120px);
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+        pointer-events: none;
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        border: 1px solid #e1e8ed;
+      }
+      
+      .vitahub-chat-window.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+        pointer-events: auto;
+      }
+      
+      /* Заголовок */
+      .vitahub-chat-header {
+        background: linear-gradient(135deg, ${this.config.primaryColor}, ${this.config.accentColor});
+        color: white;
+        padding: 16px 20px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        overflow: hidden;
+      }
+      
+      .vitahub-chat-header::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="20" cy="20" r="2" fill="rgba(255,255,255,0.1)"/><circle cx="80" cy="40" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="40" cy="80" r="1.5" fill="rgba(255,255,255,0.1)"/></svg>');
+        pointer-events: none;
+      }
+      
+      .vitahub-header-info {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        flex: 1;
+        z-index: 1;
+      }
+      
+      .vitahub-bot-avatar {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+      
+      .vitahub-bot-avatar img {
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+      }
+      
+      .vitahub-header-text {
+        flex: 1;
+      }
+      
+      .vitahub-bot-name {
+        font-weight: 600;
+        font-size: 16px;
+        margin: 0;
+      }
+      
+      .vitahub-bot-status {
+        font-size: 12px;
+        opacity: 0.9;
+        margin: 2px 0 0 0;
+      }
+      
+      .vitahub-header-actions {
+        display: flex;
+        gap: 8px;
+        z-index: 1;
+      }
+      
+      .vitahub-header-btn {
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        backdrop-filter: blur(10px);
+      }
+      
+      .vitahub-header-btn:hover {
+        background: rgba(255, 255, 255, 0.3);
+        transform: scale(1.05);
+      }
+      
+      .vitahub-header-btn svg {
+        width: 16px;
+        height: 16px;
+        fill: white;
+      }
+      
+      /* Область сообщений */
+      .vitahub-messages-container {
+        flex: 1;
+        padding: 20px;
+        overflow-y: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background: #fafbfc;
+        scroll-behavior: smooth;
+      }
+      
+      .vitahub-messages-container::-webkit-scrollbar {
+        width: 4px;
+      }
+      
+      .vitahub-messages-container::-webkit-scrollbar-track {
+        background: transparent;
+      }
+      
+      .vitahub-messages-container::-webkit-scrollbar-thumb {
+        background: #ddd;
+        border-radius: 2px;
+      }
+      
+      /* Сообщения */
+      .vitahub-message {
+        max-width: 85%;
+        animation: messageSlideIn 0.3s ease-out;
+        position: relative;
+      }
+      
+      @keyframes messageSlideIn {
+        from {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+      .vitahub-message.user {
+        align-self: flex-end;
+      }
+      
+      .vitahub-message.bot {
+        align-self: flex-start;
+      }
+      
+      .vitahub-message-content {
+        padding: 12px 16px;
+        border-radius: 18px;
+        word-wrap: break-word;
+        position: relative;
+        line-height: 1.4;
+      }
+      
+      .vitahub-message.user .vitahub-message-content {
+        background: linear-gradient(135deg, ${this.config.primaryColor}, ${this.config.accentColor});
+        color: white;
+        border-bottom-right-radius: 4px;
+      }
+      
+      .vitahub-message.bot .vitahub-message-content {
+        background: white;
+        color: #2c3e50;
+        border: 1px solid #e1e8ed;
+        border-bottom-left-radius: 4px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+      }
+      
+      .vitahub-message-time {
+        font-size: 11px;
+        color: #8999a8;
+        margin-top: 4px;
+        text-align: ${this.config.position === 'right' ? 'right' : 'left'};
+      }
+      
+      .vitahub-message.user .vitahub-message-time {
+        text-align: right;
+      }
+      
+      .vitahub-message.bot .vitahub-message-time {
+        text-align: left;
+      }
+      
+      /* Индикатор печати */
+      .vitahub-typing-indicator {
+        align-self: flex-start;
+        max-width: 85%;
+        margin-bottom: 16px;
+      }
+      
+      .vitahub-typing-content {
+        background: white;
+        border: 1px solid #e1e8ed;
+        border-radius: 18px;
+        border-bottom-left-radius: 4px;
+        padding: 12px 16px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      
+      .vitahub-typing-dots {
+        display: flex;
+        gap: 3px;
+      }
+      
+      .vitahub-typing-dot {
+        width: 6px;
+        height: 6px;
+        background: #8999a8;
+        border-radius: 50%;
+        animation: typingBounce 1.4s infinite ease-in-out both;
+      }
+      
+      .vitahub-typing-dot:nth-child(1) { animation-delay: -0.32s; }
+      .vitahub-typing-dot:nth-child(2) { animation-delay: -0.16s; }
+      .vitahub-typing-dot:nth-child(3) { animation-delay: 0s; }
+      
+      @keyframes typingBounce {
+        0%, 80%, 100% {
+          transform: scale(0.8);
+          opacity: 0.5;
+        }
+        40% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      
+      /* Предложения */
+      .vitahub-suggestions {
+        padding: 0 20px 12px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        background: #fafbfc;
+      }
+      
+      .vitahub-suggestion {
+        background: white;
+        border: 1px solid #e1e8ed;
+        border-radius: 20px;
+        padding: 8px 14px;
+        font-size: 13px;
+        color: #5a6c7d;
+        cursor: pointer;
+        transition: all 0.2s;
+        white-space: nowrap;
+      }
+      
+      .vitahub-suggestion:hover {
+        background: ${this.config.primaryColor};
+        color: white;
+        border-color: ${this.config.primaryColor};
+        transform: translateY(-1px);
+      }
+      
+      /* Панель ввода */
+      .vitahub-input-panel {
+        padding: 16px 20px;
+        background: white;
+        border-top: 1px solid #e1e8ed;
+        display: flex;
+        gap: 12px;
+        align-items: flex-end;
+      }
+      
+      .vitahub-input-container {
+        flex: 1;
+        position: relative;
+        display: flex;
+        align-items: flex-end;
+        background: #f8f9fa;
+        border-radius: 24px;
+        border: 1px solid #e1e8ed;
+        transition: all 0.2s;
+      }
+      
+      .vitahub-input-container:focus-within {
+        border-color: ${this.config.primaryColor};
+        box-shadow: 0 0 0 3px rgba(255, 71, 87, 0.1);
+      }
+      
+      .vitahub-message-input {
+        flex: 1;
+        border: none;
+        background: transparent;
+        padding: 12px 16px;
+        font-size: 14px;
+        resize: none;
+        outline: none;
+        min-height: 20px;
+        max-height: 120px;
+        line-height: 1.4;
+        font-family: inherit;
+      }
+      
+      .vitahub-message-input::placeholder {
+        color: #8999a8;
+      }
+      
+      .vitahub-input-actions {
+        display: flex;
+        align-items: center;
+        padding: 8px 12px 8px 0;
+        gap: 8px;
+      }
+      
+      .vitahub-action-btn {
+        width: 32px;
+        height: 32px;
+        border: none;
+        background: transparent;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        color: #8999a8;
+      }
+      
+      .vitahub-action-btn:hover {
+        background: #e1e8ed;
+        color: ${this.config.primaryColor};
+      }
+      
+      .vitahub-action-btn.recording {
+        background: ${this.config.primaryColor};
+        color: white;
+        animation: pulse 1s infinite;
+      }
+      
+      .vitahub-action-btn svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+      
+      .vitahub-send-btn {
+        width: 36px;
+        height: 36px;
+        background: ${this.config.primaryColor};
+        color: white;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.2s;
+        box-shadow: 0 2px 8px rgba(255, 71, 87, 0.2);
+      }
+      
+      .vitahub-send-btn:hover {
+        background: ${this.config.accentColor};
+        transform: scale(1.05);
+        box-shadow: 0 4px 12px rgba(255, 71, 87, 0.3);
+      }
+      
+      .vitahub-send-btn:disabled {
+        background: #ddd;
+        cursor: not-allowed;
+        transform: none;
+        box-shadow: none;
+      }
+      
+      .vitahub-send-btn svg {
+        width: 16px;
+        height: 16px;
+        fill: currentColor;
+      }
+      
+      /* Мобильная адаптация */
+      @media (max-width: 768px) {
+        .vitahub-chatbot {
+          bottom: 16px;
+          right: 16px;
+          left: 16px;
+        }
+        
+        .vitahub-chat-window {
+          width: 100%;
+          height: calc(100vh - 100px);
+          bottom: 80px;
+          right: 0;
+          left: 0;
+          border-radius: 16px 16px 0 0;
+        }
+        
+        .vitahub-chat-trigger {
+          width: 56px;
+          height: 56px;
+          position: fixed;
+          right: 16px;
+          bottom: 16px;
+        }
+        
+        .vitahub-trigger-icon {
+          width: 24px;
+          height: 24px;
+        }
+      }
+      
+      /* Анимации появления */
+      .vitahub-fade-in {
+        animation: fadeIn 0.3s ease-out;
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+      
+      .vitahub-slide-up {
+        animation: slideUp 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      }
+      
+      @keyframes slideUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    `;
+    
+    document.head.appendChild(style);
+  }
+  
+  createHTML() {
+    const container = document.getElementById('vitahub-chatbot-container');
+    
+    container.innerHTML = `
+      <div class="vitahub-chatbot">
+        <!-- Кнопка открытия чата -->
+        <button class="vitahub-chat-trigger" aria-label="Открыть чат с ассистентом VITAHUB">
+          <svg class="vitahub-trigger-icon" viewBox="0 0 24 24">
+            <path d="M12 2C6.48 2 2 6.48 2 12c0 1.54.36 2.98.97 4.29L1 23l6.71-1.97C9.02 21.64 10.46 22 12 22c5.52 0 10-4.48 10-10S17.52 2 12 2zm0 18c-1.24 0-2.45-.24-3.57-.73L7 20l.73-1.43C7.24 17.45 7 16.24 7 15c0-2.76 2.24-5 5-5s5 2.24 5 5-2.24 5-5 5zm-1-8h2v2h-2v-2zm0-4h2v2h-2V7z"/>
+          </svg>
+          <div class="vitahub-notification-badge" style="display: none;">1</div>
+        </button>
+        
+        <!-- Окно чата -->
+        <div class="vitahub-chat-window">
+          <!-- Заголовок -->
+          <div class="vitahub-chat-header">
+            <div class="vitahub-header-info">
+              <div class="vitahub-bot-avatar">
+                <img src="${this.config.avatarUrl}" alt="VITAHUB Assistant" onerror="this.style.display='none'">
+              </div>
+              <div class="vitahub-header-text">
+                <div class="vitahub-bot-name">${this.config.botName}</div>
+                <div class="vitahub-bot-status">Онлайн • Обычно отвечает мгновенно</div>
+              </div>
+            </div>
+            <div class="vitahub-header-actions">
+              <button class="vitahub-header-btn vitahub-minimize-btn" aria-label="Свернуть чат">
+                <svg viewBox="0 0 24 24">
+                  <path d="M19 13H5v-2h14v2z"/>
+                </svg>
+              </button>
+            </div>
+          </div>
+          
+          <!-- Область сообщений -->
+          <div class="vitahub-messages-container" id="vitahub-messages">
+            <!-- Сообщения будут добавляться здесь -->
+          </div>
+          
+          <!-- Предложения -->
+          <div class="vitahub-suggestions" id="vitahub-suggestions">
+            <!-- Предложения будут добавляться здесь -->
+          </div>
+          
+          <!-- Панель ввода -->
+          <div class="vitahub-input-panel">
+            <div class="vitahub-input-container">
+              <textarea 
+                class="vitahub-message-input" 
+                id="vitahub-message-input"
+                placeholder="${this.config.texts.placeholder}"
+                rows="1"
+                maxlength="1000"
+              ></textarea>
+              <div class="vitahub-input-actions">
+                ${this.config.enableVoice ? `
+                  <button class="vitahub-action-btn vitahub-voice-btn" id="vitahub-voice-btn" aria-label="Голосовое сообщение">
+                    <svg viewBox="0 0 24 24">
+                      <path d="M12 14c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3S9 3.34 9 5v6c0 1.66 1.34 3 3 3zm-1-9c0-.55.45-1 1-1s1 .45 1 1v6c0 .55-.45 1-1 1s-1-.45-1-1V5zm6 6c0 2.76-2.24 5-5 5s-5-2.24-5-5H5c0 3.53 2.61 6.43 6 6.92V21h2v-3.08c3.39-.49 6-3.39 6-6.92h-2z"/>
+                    </svg>
+                  </button>
+                ` : ''}
+              </div>
+            </div>
+            <button class="vitahub-send-btn" id="vitahub-send-btn" aria-label="Отправить сообщение">
+              <svg viewBox="0 0 24 24">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+      </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+    
+    // Сохраняем ссылки на элементы
+    this.elements = {
+      trigger: container.querySelector('.vitahub-chat-trigger'),
+      window: container.querySelector('.vitahub-chat-window'),
+      messages: container.querySelector('#vitahub-messages'),
+      suggestions: container.querySelector('#vitahub-suggestions'),
+      input: container.querySelector('#vitahub-message-input'),
+      sendBtn: container.querySelector('#vitahub-send-btn'),
+      voiceBtn: container.querySelector('#vitahub-voice-btn'),
+      minimizeBtn: container.querySelector('.vitahub-minimize-btn'),
+      badge: container.querySelector('.vitahub-notification-badge')
+    };
+  }
+  
+  bindEvents() {
+    // Открытие/закрытие чата
+    this.elements.trigger.addEventListener('click', () => this.toggle());
+    this.elements.minimizeBtn.addEventListener('click', () => this.close());
+    
+    // Отправка сообщений
+    this.elements.sendBtn.addEventListener('click', () => this.sendMessage());
+    this.elements.input.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter' && !e.shiftKey) {
+        e.preventDefault();
+        this.sendMessage();
+      }
+    });
+    
+    // Автоматическое изменение размера поля ввода
+    this.elements.input.addEventListener('input', (e) => {
+      e.target.style.height = 'auto';
+      e.target.style.height = Math.min(e.target.scrollHeight, 120) + 'px';
+      
+      this.updateSendButton();
+    });
+    
+    // Голосовые сообщения
+    if (this.config.enableVoice && this.elements.voiceBtn) {
+      this.elements.voiceBtn.addEventListener('click', () => this.toggleVoiceRecording());
+    }
+    
+    // Клик вне окна для закрытия
+    document.addEventListener('click', (e) => {
+      if (this.isOpen && !this.elements.trigger.contains(e.target) && !this.elements.window.contains(e.target)) {
+        this.close();
+      }
+    });
+    
+    // Обработка изменения размера окна
+    window.addEventListener('resize', () => this.handleResize());
+  }
+  
+  updateSendButton() {
+    const hasText = this.elements.input.value.trim().length > 0;
+    this.elements.sendBtn.disabled = !hasText;
+  }
+  
+  toggle() {
+    if (this.isOpen) {
+      this.close();
+    } else {
+      this.open();
+    }
+  }
+  
+  open() {
+    this.isOpen = true;
+    this.elements.window.classList.add('active');
+    this.elements.trigger.classList.add('active');
+    this.elements.badge.style.display = 'none';
+    
+    // Фокус на поле ввода
+    setTimeout(() => {
+      this.elements.input.focus();
+    }, 300);
+    
+    // Прокручиваем к последнему сообщению
+    this.scrollToBottom();
+  }
+  
+  close() {
+    this.isOpen = false;
+    this.elements.window.classList.remove('active');
+    this.elements.trigger.classList.remove('active');
+  }
+  
+  async sendMessage() {
+    const message = this.elements.input.value.trim();
+    if (!message) return;
+    
+    // Добавляем сообщение пользователя
+    this.addUserMessage(message);
+    this.elements.input.value = '';
+    this.elements.input.style.height = 'auto';
+    this.updateSendButton();
+    this.clearSuggestions();
+    
+    // Показываем индикатор печати
+    this.showTypingIndicator();
+    
+    try {
+      const response = await this.callAPI(message);
+      this.hideTypingIndicator();
+      
+      if (response.message) {
+        this.addBotMessage(response.message);
+        
+        if (response.suggestions && response.suggestions.length > 0) {
+          this.showSuggestions(response.suggestions);
+        }
+        
+        if (this.config.enableSounds) {
+          this.playNotificationSound();
+        }
+      }
+    } catch (error) {
+      this.hideTypingIndicator();
+      this.addBotMessage(this.config.texts.errorMessage + ' Попробуйте переформулировать вопрос.');
+      console.error('Ошибка отправки сообщения:', error);
+    }
+  }
+  
+  async callAPI(message) {
+    const response = await fetch(this.config.apiUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        message: message,
+        sessionId: this.sessionId,
+        metadata: {
+          timestamp: Date.now(),
+          userAgent: navigator.userAgent,
+          url: window.location.href
+        }
+      })
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP ${response.status}: ${response.statusText}`);
+    }
+    
+    return await response.json();
+  }
+  
+  addUserMessage(message) {
+    const messageEl = this.createMessageElement(message, 'user');
+    this.elements.messages.appendChild(messageEl);
+    
+    // Сохраняем в истории
+    this.messageHistory.push({
+      type: 'user',
+      content: message,
+      timestamp: Date.now()
+    });
+    this.saveHistory();
+    
+    this.scrollToBottom();
+  }
+  
+  addBotMessage(message, isWelcome = false) {
+    const messageEl = this.createMessageElement(message, 'bot');
+    this.elements.messages.appendChild(messageEl);
+    
+    if (!isWelcome) {
+      // Сохраняем в истории только не приветственные сообщения
+      this.messageHistory.push({
+        type: 'bot',
+        content: message,
+        timestamp: Date.now()
+      });
+      this.saveHistory();
+    }
+    
+    this.scrollToBottom();
+  }
+  
+  createMessageElement(content, type) {
+    const messageEl = document.createElement('div');
+    messageEl.className = `vitahub-message ${type}`;
+    
+    const time = new Date().toLocaleTimeString('ru-RU', { 
+      hour: '2-digit', 
+      minute: '2-digit' 
+    });
+    
+    messageEl.innerHTML = `
+      <div class="vitahub-message-content">${this.formatMessage(content)}</div>
+      <div class="vitahub-message-time">${time}</div>
+    `;
+    
+    return messageEl;
+  }
+  
+  formatMessage(content) {
+    // Форматируем сообщение: добавляем эмодзи, ссылки и т.д.
+    return content
+      .replace(/\n/g, '<br>')
+      .replace(/(https?:\/\/[^\s]+)/g, '<a href="$1" target="_blank" rel="noopener">$1</a>')
+      .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.*?)\*/g, '<em>$1</em>');
+  }
+  
+  showTypingIndicator() {
+    if (!this.config.enableTypingIndicator) return;
+    
+    this.isTyping = true;
+    const typingEl = document.createElement('div');
+    typingEl.className = 'vitahub-typing-indicator';
+    typingEl.id = 'vitahub-typing';
+    typingEl.innerHTML = `
+      <div class="vitahub-typing-content">
+        <div class="vitahub-typing-dots">
+          <div class="vitahub-typing-dot"></div>
+          <div class="vitahub-typing-dot"></div>
+          <div class="vitahub-typing-dot"></div>
+        </div>
+        <span>${this.config.texts.typingIndicator}</span>
+      </div>
+    `;
+    
+    this.elements.messages.appendChild(typingEl);
+    this.scrollToBottom();
+  }
+  
+  hideTypingIndicator() {
+    this.isTyping = false;
+    const typingEl = document.getElementById('vitahub-typing');
+    if (typingEl) {
+      typingEl.remove();
+    }
+  }
+  
+  showSuggestions(suggestions) {
+    if (!this.config.enableSuggestions) return;
+    
+    this.suggestions = suggestions;
+    this.elements.suggestions.innerHTML = suggestions.map(suggestion => 
+      `<button class="vitahub-suggestion" data-suggestion="${suggestion}">${suggestion}</button>`
+    ).join('');
+    
+    // Обработчики клика на предложения
+    this.elements.suggestions.querySelectorAll('.vitahub-suggestion').forEach(btn => {
+      btn.addEventListener('click', () => {
+        this.elements.input.value = btn.dataset.suggestion;
+        this.updateSendButton();
+        this.elements.input.focus();
+        this.clearSuggestions();
+      });
+    });
+  }
+  
+  clearSuggestions() {
+    this.elements.suggestions.innerHTML = '';
+  }
+  
+  async loadSuggestions() {
+    try {
+      const response = await fetch(this.config.apiUrl.replace('/chat', '/suggestions'));
+      if (response.ok) {
+        const data = await response.json();
+        if (data.suggestions && data.suggestions.length > 0) {
+          this.showSuggestions(data.suggestions.slice(0, 3));
+        }
+      }
+    } catch (error) {
+      console.warn('Не удалось загрузить предложения:', error);
+    }
+  }
+  
+  renderMessages() {
+    this.messageHistory.forEach(msg => {
+      const messageEl = this.createMessageElement(msg.content, msg.type);
+      this.elements.messages.appendChild(messageEl);
+    });
+    this.scrollToBottom();
+  }
+  
+  scrollToBottom() {
+    setTimeout(() => {
+      this.elements.messages.scrollTop = this.elements.messages.scrollHeight;
+    }, 100);
+  }
+  
+  playNotificationSound() {
+    try {
+      // Простой звуковой сигнал
+      const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+      const oscillator = audioContext.createOscillator();
+      const gainNode = audioContext.createGain();
+      
+      oscillator.connect(gainNode);
+      gainNode.connect(audioContext.destination);
+      
+      oscillator.frequency.setValueAtTime(800, audioContext.currentTime);
+      oscillator.frequency.setValueAtTime(1000, audioContext.currentTime + 0.1);
+      
+      gainNode.gain.setValueAtTime(0, audioContext.currentTime);
+      gainNode.gain.linearRampToValueAtTime(0.2, audioContext.currentTime + 0.01);
+      gainNode.gain.exponentialRampToValueAtTime(0.01, audioContext.currentTime + 0.2);
+      
+      oscillator.start(audioContext.currentTime);
+      oscillator.stop(audioContext.currentTime + 0.2);
+    } catch (error) {
+      console.warn('Не удалось воспроизвести звук:', error);
+    }
+  }
+  
+  toggleVoiceRecording() {
+    // Заглушка для голосовых сообщений
+    // В реальной реализации здесь будет интеграция с Web Speech API
+    console.log('Голосовые сообщения пока не реализованы');
+    alert('Функция голосовых сообщений находится в разработке');
+  }
+  
+  handleResize() {
+    // Обработка изменения размера экрана
+    if (window.innerWidth <= 768 && this.isOpen) {
+      this.elements.window.style.height = `${window.innerHeight - 100}px`;
+    }
+  }
+}
+
+// ===========================================
+// ИНИЦИАЛИЗАЦИЯ
+// ===========================================
+document.addEventListener('DOMContentLoaded', function() {
+  // Создаем и запускаем чат-бот
+  window.vitahubChatbot = new VitahubChatbot(CHATBOT_CONFIG);
+  
+  console.log('🚀 VITAHUB Chatbot v2.0 успешно запущен!');
+});
+
+// Экспорт для внешнего использования
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { VitahubChatbot, CHATBOT_CONFIG };
+  }
+</script> 

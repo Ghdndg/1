@@ -1,0 +1,19 @@
+services:
+  bot:
+    build: .
+    image: assistant-bot:latest
+    container_name: assistant-bot
+    environment:
+      PORT: "8080"
+      GEMINI_API_KEY: "${GEMINI_API_KEY}"
+      ALLOWED_ORIGINS: "https://your-landing.com,https://consultant-it.ru"
+      CLIENT_TOKEN: "${CLIENT_TOKEN}"
+      LEADS_EMAIL_TO: "${LEADS_EMAIL_TO}"
+      SMTP_HOST: "${SMTP_HOST}"
+      SMTP_USER: "${SMTP_USER}"
+      SMTP_PASS: "${SMTP_PASS}"
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+
+
